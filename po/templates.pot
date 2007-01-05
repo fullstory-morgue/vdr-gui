@@ -1,0 +1,311 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-12-28 16:19+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/interface.c:137
+msgid "VDR-GUI"
+msgstr ""
+
+#: ../src/interface.c:174
+msgid "start VDR"
+msgstr ""
+
+#: ../src/interface.c:188
+msgid "VDR-Start"
+msgstr ""
+
+#: ../src/interface.c:197
+msgid "stop VDR"
+msgstr ""
+
+#: ../src/interface.c:211
+msgid "VDR-Stop"
+msgstr ""
+
+#: ../src/interface.c:215
+msgid "wpvrscan"
+msgstr ""
+
+#: ../src/interface.c:220
+msgid "VDR-Channelscan Analog-Tuner Typ PVR"
+msgstr ""
+
+#: ../src/interface.c:222
+msgid "Videodir"
+msgstr ""
+
+#: ../src/interface.c:227
+msgid "Change your Video Directory (default: /var/lib/video.00)"
+msgstr ""
+
+#: ../src/interface.c:229
+msgid "Language auto"
+msgstr ""
+
+#: ../src/interface.c:233
+msgid "Set VDR-language automatically"
+msgstr ""
+
+#: ../src/interface.c:235
+msgid "Language manuel"
+msgstr ""
+
+#: ../src/interface.c:239
+msgid "Manually define VDR-language in VDR-OSD-Menu"
+msgstr ""
+
+#: ../src/interface.c:241
+msgid "VDR Autostart"
+msgstr ""
+
+#: ../src/interface.c:246
+msgid "run vdr at systemstart"
+msgstr ""
+
+#: ../src/interface.c:248
+msgid "Disable Autostart"
+msgstr ""
+
+#: ../src/interface.c:253
+msgid "disable vdr systemstart"
+msgstr ""
+
+#: ../src/interface.c:260
+msgid ""
+"Change VDR Channelslist. If you don't find your's, then use channelscan from "
+"OSD in your TV Picture, or search the Internet for w_scan. Save the channels."
+"conf to /var/lib/vdr/channels.conf. SET USER AND GROUP  TO vdr (chown vdr:"
+"vdr channels.conf)"
+msgstr ""
+
+#: ../src/interface.c:274
+msgid "Channellist"
+msgstr ""
+
+#: ../src/interface.c:278
+msgid "<b>VDR</b>"
+msgstr ""
+
+#: ../src/interface.c:299
+msgid "TV Fullscreen off"
+msgstr ""
+
+#: ../src/interface.c:303
+msgid "Start TV-Picture in normal mode"
+msgstr ""
+
+#: ../src/interface.c:309
+msgid "Web-Frontend (vdradmin)"
+msgstr ""
+
+#: ../src/interface.c:323
+msgid "Web-Frontend"
+msgstr ""
+
+#: ../src/interface.c:327
+msgid "User Manual"
+msgstr ""
+
+#: ../src/interface.c:331
+msgid "VDR User Manual"
+msgstr ""
+
+#: ../src/interface.c:333
+msgid "TV Fullscreen"
+msgstr ""
+
+#: ../src/interface.c:337
+msgid "Start TV-Picture in Fullscreen mode"
+msgstr ""
+
+#: ../src/interface.c:339
+msgid "<b>Others</b>"
+msgstr ""
+
+#: ../src/interface.c:349
+msgid "http://www.sidux.com"
+msgstr ""
+
+#: ../src/interface.c:360
+msgid "http://www.linuxtv.org/vdrwiki"
+msgstr ""
+
+#: ../src/interface.c:372
+msgid "Update your VDR"
+msgstr ""
+
+#: ../src/interface.c:386
+msgid "Update"
+msgstr ""
+
+#: ../src/interface.c:405
+msgid "get keymap"
+msgstr ""
+
+#: ../src/interface.c:410
+msgid "Get xine Keyboardlayout for VDR (see ~/.xine/keymap"
+msgstr ""
+
+#: ../src/interface.c:412
+msgid "xine-ui Autostart"
+msgstr ""
+
+#: ../src/interface.c:417
+msgid "run xine-ui at systemstart (only for KDE)"
+msgstr ""
+
+#: ../src/interface.c:424
+msgid "TV-Picture with xine-ui (NOT SUPPORTED)"
+msgstr ""
+
+#: ../src/interface.c:438
+msgid "xine-ui (Picture)"
+msgstr ""
+
+#: ../src/interface.c:442 ../src/interface.c:470
+msgid "disable Autostart"
+msgstr ""
+
+#: ../src/interface.c:447
+msgid "disable xine-ui at systemstart"
+msgstr ""
+
+#: ../src/interface.c:449
+msgid "<b>TV</b> not supported"
+msgstr ""
+
+#: ../src/interface.c:475
+msgid "disable vdr-sxfe at systemstart"
+msgstr ""
+
+#: ../src/interface.c:477
+msgid "vdr-sxfe Autostart"
+msgstr ""
+
+#: ../src/interface.c:482
+msgid "run vdr-sxfe at systemstart (only for KDE)"
+msgstr ""
+
+#: ../src/interface.c:489
+msgid "TV-Picture with xineliboutput Frontend"
+msgstr ""
+
+#: ../src/interface.c:509
+msgid "vdr-sxfe (Picture)"
+msgstr ""
+
+#: ../src/interface.c:513
+msgid "<b>TV</b>"
+msgstr ""
+
+#: ../src/interface.c:519
+msgid ""
+"by\n"
+"Horst  J. Tritremmel (hjt)"
+msgstr ""
+
+#: ../src/interface.c:551 ../src/interface.c:646
+msgid "Exit"
+msgstr ""
+
+#: ../src/interface.c:570
+msgid "Allow client access"
+msgstr ""
+
+#: ../src/interface.c:574
+msgid "Allow client connect (insert IP from client). Do this on Server"
+msgstr ""
+
+#: ../src/interface.c:576
+msgid "UDP network transport"
+msgstr ""
+
+#: ../src/interface.c:580
+msgid "UDP network transport. Use this on server or client"
+msgstr ""
+
+#: ../src/interface.c:582
+msgid "TCP network transport"
+msgstr ""
+
+#: ../src/interface.c:586
+msgid "TCP network transport. Use this on server or client (default)"
+msgstr ""
+
+#: ../src/interface.c:592
+msgid ""
+"Network IP-Adress from VDR Server, with xineliboutput is only one client "
+"possible. For more clients you must use streamdev-plugin. Do this on Client"
+msgstr ""
+
+#: ../src/interface.c:593
+msgid "localhost"
+msgstr ""
+
+#: ../src/interface.c:595
+msgid "IP:"
+msgstr ""
+
+#: ../src/interface.c:600
+msgid "<b>Streaming</b>"
+msgstr ""
+
+#: ../src/interface.c:606
+msgid "Action"
+msgstr ""
+
+#: ../src/interface.c:618
+msgid ""
+"Up\t\t\tUp\n"
+"Down\t\tDown\n"
+"Menu\t\tm\n"
+"Ok\t\t\tReturn\n"
+"Back\t\tBackSpace\n"
+"Left\t\t\tLeft\n"
+"Right\t\tRight\n"
+"Red\t\t\tF1\n"
+"Green\t\tF2\n"
+"Yellow\t\tF3\n"
+"Blue\t\tF4\n"
+"0\t\t\t0\n"
+"1\t\t\t1\n"
+"2\t\t\t2\n"
+"3\t\t\t3\n"
+"4\t\t\t4\n"
+"5\t\t\t5\n"
+"6\t\t\t6\n"
+"7\t\t\t7\n"
+"8\t\t\t8\n"
+"9\t\t\t9\n"
+"Info\t\t\ti\n"
+"Pause\t\tspace\n"
+"FastFwd\t\tF6\n"
+"FastRew\t\tF5\n"
+"Power\t\tp\n"
+"Volume+\tF12\n"
+"Volume-\t\tF11\n"
+"Mute    \t\tF10"
+msgstr ""
+
+#: ../src/interface.c:650
+msgid "Keyboardlayout"
+msgstr ""
+
+#: ../src/support.c:90 ../src/support.c:114
+#, c-format
+msgid "Couldn't find pixmap file: %s"
+msgstr ""

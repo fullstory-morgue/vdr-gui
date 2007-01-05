@@ -1,0 +1,339 @@
+# translation of de.po to Deutsch
+# Horst Tritremmel <peter_weber69@gmx.at>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: de\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-12-28 16:19+0100\n"
+"PO-Revision-Date: 2006-12-12 13:48+0100\n"
+"Last-Translator: Horst Tritremmel <peter_weber69@gmx.at>\n"
+"Language-Team: Deutsch <de@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../src/interface.c:137
+msgid "VDR-GUI"
+msgstr "VDR-GU"
+
+#: ../src/interface.c:174
+msgid "start VDR"
+msgstr "start VDR"
+
+#: ../src/interface.c:188
+msgid "VDR-Start"
+msgstr "VDR-Start"
+
+#: ../src/interface.c:197
+msgid "stop VDR"
+msgstr "stop VDR"
+
+#: ../src/interface.c:211
+msgid "VDR-Stop"
+msgstr "VDR-Stop"
+
+#: ../src/interface.c:215
+msgid "wpvrscan"
+msgstr "wpvrscan"
+
+#: ../src/interface.c:220
+msgid "VDR-Channelscan Analog-Tuner Typ PVR"
+msgstr "VDR Kanalsuche mit Analog-Tuner Typ PVR"
+
+#: ../src/interface.c:222
+msgid "Videodir"
+msgstr "Videoverzeichnis"
+
+#: ../src/interface.c:227
+msgid "Change your Video Directory (default: /var/lib/video.00)"
+msgstr "Videoverzeichnis ändern (Voreinstellung: /var/lib/video.00)"
+
+#: ../src/interface.c:229
+msgid "Language auto"
+msgstr "Sprache auto"
+
+#: ../src/interface.c:233
+msgid "Set VDR-language automatically"
+msgstr "VDR Sprache automatisch setzen"
+
+#: ../src/interface.c:235
+msgid "Language manuel"
+msgstr "Sprache manuel"
+
+#: ../src/interface.c:239
+msgid "Manually define VDR-language in VDR-OSD-Menu"
+msgstr "Sprache im VDR-OSD Menü setzen"
+
+#: ../src/interface.c:241
+msgid "VDR Autostart"
+msgstr "VDR Autostart"
+
+#: ../src/interface.c:246
+msgid "run vdr at systemstart"
+msgstr "VDR bei Systemstart starten"
+
+#: ../src/interface.c:248
+msgid "Disable Autostart"
+msgstr "Autostart aus"
+
+#: ../src/interface.c:253
+msgid "disable vdr systemstart"
+msgstr "VDR bei Systemstart nicht starten"
+
+#: ../src/interface.c:260
+msgid ""
+"Change VDR Channelslist. If you don't find your's, then use channelscan from "
+"OSD in your TV Picture, or search the Internet for w_scan. Save the channels."
+"conf to /var/lib/vdr/channels.conf. SET USER AND GROUP  TO vdr (chown vdr:"
+"vdr channels.conf)"
+msgstr ""
+"Kanalliste ändern. Wenn Sie ihren Sendebereich nicht finden verwenden Sie "
+"die Kanalsuche im VDR-OSD Menü, oder suchen im Internet nach dem Programm "
+"w_scan. Die channels.conf liegt im Ordner /var/lib/vdr/channels.conf. "
+"ACHTUNG: Für Eigentümer und Gruppe der Datei muss vdr eingestellt sein "
+"(chown vdr:vdr channels.conf)"
+
+#: ../src/interface.c:274
+msgid "Channellist"
+msgstr "Kanalliste"
+
+#: ../src/interface.c:278
+msgid "<b>VDR</b>"
+msgstr ""
+
+#: ../src/interface.c:299
+msgid "TV Fullscreen off"
+msgstr "TV Normalbild"
+
+#: ../src/interface.c:303
+msgid "Start TV-Picture in normal mode"
+msgstr "TV Bild im Normalmodus starten"
+
+#: ../src/interface.c:309
+msgid "Web-Frontend (vdradmin)"
+msgstr "Web-Frontend (vdradmin)"
+
+#: ../src/interface.c:323
+msgid "Web-Frontend"
+msgstr "Web-Frontend"
+
+#: ../src/interface.c:327
+msgid "User Manual"
+msgstr "Benutzerhandbuch"
+
+#: ../src/interface.c:331
+msgid "VDR User Manual"
+msgstr "VDR Benutzerhandbuch"
+
+#: ../src/interface.c:333
+msgid "TV Fullscreen"
+msgstr "TV Vollbild"
+
+#: ../src/interface.c:337
+msgid "Start TV-Picture in Fullscreen mode"
+msgstr "TV Bild im Vollbildmodus starten"
+
+#: ../src/interface.c:339
+msgid "<b>Others</b>"
+msgstr ""
+
+#: ../src/interface.c:349
+msgid "http://www.sidux.com"
+msgstr "http://www.sidux.com"
+
+#: ../src/interface.c:360
+msgid "http://www.linuxtv.org/vdrwiki"
+msgstr "http://www.vdr-portal.de"
+
+#: ../src/interface.c:372
+msgid "Update your VDR"
+msgstr "VDR aktualisieren"
+
+#: ../src/interface.c:386
+msgid "Update"
+msgstr "Update"
+
+#: ../src/interface.c:405
+msgid "get keymap"
+msgstr "Tastaturbelegung"
+
+#: ../src/interface.c:410
+msgid "Get xine Keyboardlayout for VDR (see ~/.xine/keymap"
+msgstr "xine Einstellungen für VDR holen (~/.xine/config, ~/.xine/keymap)"
+
+#: ../src/interface.c:412
+msgid "xine-ui Autostart"
+msgstr "xine-ui Autostart"
+
+#: ../src/interface.c:417
+msgid "run xine-ui at systemstart (only for KDE)"
+msgstr "xine-ui bei Systemstart (nur für KDE)"
+
+#: ../src/interface.c:424
+msgid "TV-Picture with xine-ui (NOT SUPPORTED)"
+msgstr "TV-Bild mit xine-ui (Nicht unterstützt)"
+
+#: ../src/interface.c:438
+msgid "xine-ui (Picture)"
+msgstr "xine-ui (Bild)"
+
+#: ../src/interface.c:442 ../src/interface.c:470
+msgid "disable Autostart"
+msgstr "Autostart aus"
+
+#: ../src/interface.c:447
+msgid "disable xine-ui at systemstart"
+msgstr "xine-ui bei Systemstart ausschalten"
+
+#: ../src/interface.c:449
+#, fuzzy
+msgid "<b>TV</b> not supported"
+msgstr "&lt;b&gt;TV&lt;/b&gt; nicht unterstützt"
+
+#: ../src/interface.c:475
+msgid "disable vdr-sxfe at systemstart"
+msgstr "vdr-sxfe bei Systemstart ausschalten"
+
+#: ../src/interface.c:477
+msgid "vdr-sxfe Autostart"
+msgstr "vdr-sxfe Autostart"
+
+#: ../src/interface.c:482
+msgid "run vdr-sxfe at systemstart (only for KDE)"
+msgstr "vdr-sxfe bei Systemstart (nur für KDE)"
+
+#: ../src/interface.c:489
+msgid "TV-Picture with xineliboutput Frontend"
+msgstr "TV-Bild mit xineliboutput Bild"
+
+#: ../src/interface.c:509
+msgid "vdr-sxfe (Picture)"
+msgstr "vdr-sxfe (Bild)"
+
+#: ../src/interface.c:513
+msgid "<b>TV</b>"
+msgstr ""
+
+#: ../src/interface.c:519
+#, fuzzy
+msgid ""
+"by\n"
+"Horst  J. Tritremmel (hjt)"
+msgstr "von Horst J. Tritremmel hjt"
+
+#: ../src/interface.c:551 ../src/interface.c:646
+msgid "Exit"
+msgstr "Exit"
+
+#: ../src/interface.c:570
+msgid "Allow client access"
+msgstr "Clientzugriff erlauben"
+
+#: ../src/interface.c:574
+msgid "Allow client connect (insert IP from client). Do this on Server"
+msgstr ""
+"Erlauben Sie den Zugriff von Clients. Tragen Sie die IP des Clients ein. "
+"Einzustellen am VDR Server"
+
+#: ../src/interface.c:576
+msgid "UDP network transport"
+msgstr "UDP Netzwerktransp."
+
+#: ../src/interface.c:580
+msgid "UDP network transport. Use this on server or client"
+msgstr "UDP Netzwerktransport. Einzustellen am Server oder Client"
+
+#: ../src/interface.c:582
+msgid "TCP network transport"
+msgstr "TCP Netzwerktransp."
+
+#: ../src/interface.c:586
+msgid "TCP network transport. Use this on server or client (default)"
+msgstr ""
+"TCP Netzwerktransport. Einzustellen am Server oder Client "
+"(Vorgabeeinstellung)"
+
+#: ../src/interface.c:592
+msgid ""
+"Network IP-Adress from VDR Server, with xineliboutput is only one client "
+"possible. For more clients you must use streamdev-plugin. Do this on Client"
+msgstr ""
+"Netwerk IP-Adresse vom VDR Server eingeben. Mit xineliboutput ist nur ein "
+"Client möglich. Für mehrere Clients verwenden sie das streamdev Plugin. "
+"Einzustellen am Client"
+
+#: ../src/interface.c:593
+msgid "localhost"
+msgstr ""
+
+#: ../src/interface.c:595
+msgid "IP:"
+msgstr ""
+
+#: ../src/interface.c:600
+msgid "<b>Streaming</b>"
+msgstr ""
+
+#: ../src/interface.c:606
+msgid "Action"
+msgstr "Action"
+
+#: ../src/interface.c:618
+#, fuzzy
+msgid ""
+"Up\t\t\tUp\n"
+"Down\t\tDown\n"
+"Menu\t\tm\n"
+"Ok\t\t\tReturn\n"
+"Back\t\tBackSpace\n"
+"Left\t\t\tLeft\n"
+"Right\t\tRight\n"
+"Red\t\t\tF1\n"
+"Green\t\tF2\n"
+"Yellow\t\tF3\n"
+"Blue\t\tF4\n"
+"0\t\t\t0\n"
+"1\t\t\t1\n"
+"2\t\t\t2\n"
+"3\t\t\t3\n"
+"4\t\t\t4\n"
+"5\t\t\t5\n"
+"6\t\t\t6\n"
+"7\t\t\t7\n"
+"8\t\t\t8\n"
+"9\t\t\t9\n"
+"Info\t\t\ti\n"
+"Pause\t\tspace\n"
+"FastFwd\t\tF6\n"
+"FastRew\t\tF5\n"
+"Power\t\tp\n"
+"Volume+\tF12\n"
+"Volume-\t\tF11\n"
+"Mute    \t\tF10"
+msgstr ""
+"Auf Auf Runter Runter Menü m Ok Return Zurück BackSpace Links Links Rechts "
+"Rechts Rot F1 Grün F2 Gelb F3 Blau F4 0 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 "
+"9 Info i Pause Leertaste Vorwärts F6 Rückwärts F5 Aus p Lautst+ F12 Lautst- "
+"F11 Leise F10"
+
+#: ../src/interface.c:650
+msgid "Keyboardlayout"
+msgstr "Tastaturbelegung"
+
+#: ../src/support.c:90 ../src/support.c:114
+#, c-format
+msgid "Couldn't find pixmap file: %s"
+msgstr ""
+
+#~ msgid "VDR-IP"
+#~ msgstr "VDR-IP"
+
+#~ msgid "&lt;b&gt;Streaming&lt;/b&gt;"
+#~ msgstr "&lt;b&gt;Streaming&lt;/b&gt"
+
+#~ msgid "&lt;b&gt;Others&lt;/b&gt;"
+#~ msgstr "&lt;b&gt;Zusatzeinstellung&lt;/b&gt;"
+
+#~ msgid "vdr-sxfe"
+#~ msgstr "vdr-sxfe"

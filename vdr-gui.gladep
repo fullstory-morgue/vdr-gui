@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="no"?> <!--*- mode: xml -*-->
+<!DOCTYPE glade-project SYSTEM "http://glade.gnome.org/glade-project-2.0.dtd">
+
+<glade-project>
+  <name>Vdr-gui</name>
+  <program_name>vdr-gui</program_name>
+  <gnome_support>FALSE</gnome_support>
+  <gnome_help_support>TRUE</gnome_help_support>
+</glade-project>

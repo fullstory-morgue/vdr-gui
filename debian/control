@@ -1,0 +1,12 @@
+Source: vdr-gui
+Section: misc
+Priority: extra
+Maintainer: Horst Tritremmel <peter_weber69@gmx.at>
+Build-Depends: debhelper (>= 5), autotools-dev, libgtk2.0-dev, libglade2-dev
+Standards-Version: 3.7.2
+
+Package: vdr-gui
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, sidux-vdr (>= 1.2.11)
+Description: GUI for Video Disc Recorder (VDR)
+ This is a gui for a simply vdr handling

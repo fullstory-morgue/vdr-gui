@@ -1,0 +1,260 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2006-12-12 13:28+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: vdr-gui.glade:8(property) 
+msgid "VDR-GUI"
+msgstr ""
+
+#: vdr-gui.glade:69(property) 
+msgid "Network IP-Adress from VDR Server, with xineliboutput is only one client possible. For more clients you must use streamdev-plugin. Do this on Client"
+msgstr ""
+
+#: vdr-gui.glade:72(property) 
+msgid "VDR-IP"
+msgstr ""
+
+#: vdr-gui.glade:89(property) 
+msgid "Allow client connect (insert IP from client). Do this on Server"
+msgstr ""
+
+#: vdr-gui.glade:92(property) 
+msgid "Allow client access"
+msgstr ""
+
+#: vdr-gui.glade:109(property)
+msgid "TCP network transport"
+msgstr ""
+
+#: vdr-gui.glade:111(property)
+msgid "TCP network transport. Use this on server or client (default)"
+msgstr ""
+
+#: vdr-gui.glade:129(property)
+msgid "UDP network transport"
+msgstr ""
+
+#: vdr-gui.glade:131(property)
+msgid "UDP network transport. Use this on server or client"
+msgstr ""
+
+#: vdr-gui.glade:151(property) 
+msgid "&lt;b&gt;Streaming&lt;/b&gt;"
+msgstr ""
+
+#: vdr-gui.glade:208(property) 
+msgid "start VDR"
+msgstr ""
+
+#: vdr-gui.glade:252(property) 
+msgid "VDR-Start"
+msgstr ""
+
+#: vdr-gui.glade:290(property) 
+msgid "stop VDR"
+msgstr ""
+
+#: vdr-gui.glade:334(property) 
+msgid "VDR-Stop"
+msgstr ""
+
+#: vdr-gui.glade:372(property) 
+msgid "Change VDR Channelslist. If you don't find your's, then use channelscan from OSD in your TV Picture, or search the Internet for w_scan. Save the channels.conf to /var/lib/vdr/channels.conf. SET USER AND GROUP TO vdr (chown vdr:vdr channels.conf)"
+msgstr ""
+
+#: vdr-gui.glade:419(property) 
+msgid "Channellist"
+msgstr ""
+
+#: vdr-gui.glade:457(property) 
+msgid "VDR-Channelscan Analog-Tuner Typ PVR"
+msgstr ""
+
+#: vdr-gui.glade:459(property) 
+msgid "wpvrscan"
+msgstr ""
+
+#: vdr-gui.glade:477(property) 
+msgid "Change your Video Directory (default: /var/lib/video.00)"
+msgstr ""
+
+#: vdr-gui.glade:479(property) 
+msgid "Videodir"
+msgstr ""
+
+#: vdr-gui.glade:496(property) 
+msgid "Set VDR-language automatically"
+msgstr ""
+
+#: vdr-gui.glade:498(property) 
+msgid "Language auto"
+msgstr ""
+
+#: vdr-gui.glade:515(property) 
+msgid "Manually define VDR-language in VDR-OSD-Menu"
+msgstr ""
+
+#: vdr-gui.glade:517(property) 
+msgid "Language manuel"
+msgstr ""
+
+#: vdr-gui.glade:535(property) 
+msgid "run vdr at systemstart"
+msgstr ""
+
+#: vdr-gui.glade:537(property) 
+msgid "VDR Autostart"
+msgstr ""
+
+#: vdr-gui.glade:555(property) 
+msgid "disable vdr systemstart"
+msgstr ""
+
+#: vdr-gui.glade:557(property) 
+msgid "Disable Autostart"
+msgstr ""
+
+#: vdr-gui.glade:632(property) 
+msgid "Start TV-Picture in normal mode"
+msgstr ""
+
+#: vdr-gui.glade:634(property) 
+msgid "TV Fullscreen off"
+msgstr ""
+
+#: vdr-gui.glade:651(property) 
+msgid "Web-Frontend (vdradmin)"
+msgstr ""
+
+#: vdr-gui.glade:695(property) 
+msgid "Web-Frontend"
+msgstr ""
+
+#: vdr-gui.glade:732(property) 
+msgid "VDR User Manual"
+msgstr ""
+
+#: vdr-gui.glade:734(property) 
+msgid "User Manual"
+msgstr ""
+
+#: vdr-gui.glade:751(property) 
+msgid "Start TV-Picture in Fullscreen mode"
+msgstr ""
+
+#: vdr-gui.glade:753(property) 
+msgid "TV Fullscreen"
+msgstr ""
+
+#: vdr-gui.glade:772(property) 
+msgid "&lt;b&gt;Others&lt;/b&gt;"
+msgstr ""
+
+#: vdr-gui.glade:803(property) 
+msgid "http://www.sidux.com"
+msgstr ""
+
+#: vdr-gui.glade:832(property) 
+msgid "http://www.linuxtv.org/vdrwiki"
+msgstr ""
+
+#: vdr-gui.glade:861(property) 
+msgid "by Horst J. Tritremmel hjt"
+msgstr ""
+
+#: vdr-gui.glade:935(property) 
+msgid "Exit"
+msgstr ""
+
+#: vdr-gui.glade:973(property) 
+msgid "Update your VDR"
+msgstr ""
+
+#: vdr-gui.glade:1017(property) 
+msgid "Update"
+msgstr ""
+
+#: vdr-gui.glade:1080(property) 
+msgid "Get xine Keyboardlayout for VDR (see ~/.xine/keymap"
+msgstr ""
+
+#: vdr-gui.glade:1082(property) 
+msgid "get keymap"
+msgstr ""
+
+#: vdr-gui.glade:1100(property) 
+msgid "run xine-ui at systemstart (only for KDE)"
+msgstr ""
+
+#: vdr-gui.glade:1102(property) 
+msgid "xine-ui Autostart"
+msgstr ""
+
+#: vdr-gui.glade:1120(property) 
+msgid "TV-Picture with xine-ui (NOT SUPPORTED)"
+msgstr ""
+
+#: vdr-gui.glade:1165(property) 
+msgid "xine-ui (Picture)"
+msgstr ""
+
+#: vdr-gui.glade:1203(property) 
+msgid "disable xine-ui at systemstart"
+msgstr ""
+
+#: vdr-gui.glade:1205(property) vdr-gui.glade:1283(property) 
+msgid "disable Autostart"
+msgstr ""
+
+#: vdr-gui.glade:1224(property) 
+msgid "&lt;b&gt;TV&lt;/b&gt; not supported"
+msgstr ""
+
+#: vdr-gui.glade:1281(property) 
+msgid "disable vdr-sxfe at systemstart"
+msgstr ""
+
+#: vdr-gui.glade:1301(property) 
+msgid "run vdr-sxfe at systemstart (only for KDE)"
+msgstr ""
+
+#: vdr-gui.glade:1303(property) 
+msgid "vdr-sxfe Autostart"
+msgstr ""
+
+#: vdr-gui.glade:1321(property) 
+msgid "TV-Picture with xineliboutput Frontend"
+msgstr ""
+
+#: vdr-gui.glade:1369(property) 
+msgid "vdr-sxfe (Picture)"
+msgstr ""
+
+#: vdr-gui.glade:1443(property) 
+msgid "Action"
+msgstr ""
+
+#: vdr-gui.glade:1453(property) 
+msgid "vdr-sxfe"
+msgstr ""
+
+#: vdr-gui.glade:1486(property) 
+msgid "Up Up Down Down Menu m Ok Return Back BackSpace Left Left Right Right Red F1 Green F2 Yellow F3 Blue F4 0 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 Info i Pause space FastFwd F6 FastRew F5 Power p Volume+ F12 Volume- F11 Mute F10"
+msgstr ""
+
+#: vdr-gui.glade:1531(property) 
+msgid "Keyboardlayout"
+msgstr ""
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+#: vdr-gui.glade:0(None) 
+msgid "translator-credits"
+msgstr ""
+
