@@ -1,11 +1,5 @@
 #!/usr/bin/make -f
 
-common-install-arch common-install-indep:: common-install-impl
-common-install-impl::
-	# Gettext Internationalisation (i18n)
-	DESTDIR=$(CURDIR)/debian/vdr-gui po/make_po.sh vdr-gui.mo
-
-
 # These are used for cross-compiling and for saving the configure script
 # from having to guess our platform (since we know it already)
 DEB_HOST_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
@@ -53,6 +47,7 @@ install: build
 
 	# Add here commands to install the package into debian/vdr-gui.
 	$(MAKE) DESTDIR=$(CURDIR)/debian/vdr-gui install
+	DESTDIR=$(CURDIR)/debian/vdr-gui po/make_po.sh vdr-gui.mo
 
 
 # Build architecture-independent files here.
