@@ -3,6 +3,9 @@
 #endif
 
 #include <gtk/gtk.h>
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 #include "callbacks.h"
 #include "interface.h"
@@ -205,8 +208,7 @@ void
 on_language_automatic_clicked          (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("su-me \" \
-            echo '#needed if_file_empty' >> /var/lib/vdr/sidux-vdr/sidux-vdr.conf; \
+    system("su-me \"echo '#needed if_file_empty' >> /var/lib/vdr/sidux-vdr/sidux-vdr.conf; \
             sed -i -e '/LanguageMode/d' -e 'i\LanguageMode = 0' -e '/./d' /var/lib/vdr/sidux-vdr/sidux-vdr.conf\"");
 }
 
@@ -215,8 +217,7 @@ void
 on_language_manuel_clicked             (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("su-me \" \
-            echo '#needed if_file_empty' >> /var/lib/vdr/sidux-vdr/sidux-vdr.conf; \
+    system("su-me \"echo '#needed if_file_empty' >> /var/lib/vdr/sidux-vdr/sidux-vdr.conf; \
             sed -i -e '/LanguageMode/d' -e 'i\LanguageMode = 1' -e '/./d' /var/lib/vdr/sidux-vdr/sidux-vdr.conf\"");
 }
 
@@ -279,6 +280,8 @@ on_sidux_eventbox1_button_press_event  (GtkWidget       *widget,
               else \
                     x-www-browser 'http://www.sidux.com/index.php?&newlang=eng' & \
               fi");
+
+     return FALSE;
 }
 
 
@@ -292,6 +295,8 @@ on_vdr_eventbox2_button_press_event    (GtkWidget       *widget,
               else \
                     x-www-browser 'http://www.linuxtv.org/vdrwiki/index.php/Main_Page' & \
               fi");
+
+      return FALSE;
 }
 
 
@@ -314,4 +319,5 @@ on_window1_configure_event             (GtkWidget       *widget,
   vdrip_file("r");   // r for read the file
   gtk_entry_set_text (GTK_ENTRY (entry), IPfile);
 
+  return FALSE;
 }
