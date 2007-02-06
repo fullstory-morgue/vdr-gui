@@ -1,8 +1,12 @@
 vdr-gui (0.0.3) unstable; urgency=low
 
-  * debian/rules and src/callbacks.c fixes 
+  [ Horst Tritremmel ]
+  * debian/rules and src/callbacks.c fixes
 
- -- Horst Tritremmel <peter_weber69@gmx.at>  Fri, 19 Jan 2007 09:26:36 +0100
+  [ Stefan Lippers-Hollmann ]
+  * compile hotfix.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue,  6 Feb 2007 17:09:29 +0100
 
 vdr-gui (001-2) unstable; urgency=low
 
