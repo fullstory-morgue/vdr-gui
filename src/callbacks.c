@@ -49,8 +49,8 @@ on_vdr_sxfe_clicked                    (GtkButton       *button,
     GtkWidget *entry = lookup_widget(GTK_WIDGET(button), "IPEntry");
     strcpy(IP, gtk_entry_get_text(GTK_ENTRY(entry)));
     vdrip_file("w");  // w for write the file
-
-    system("vdr-xine sxfe &");
+printf("/usr/sbin/vdr-xine sxfe &\n");
+    system("/usr/sbin/vdr-xine sxfe &");
 }
 
 
@@ -58,7 +58,7 @@ void
 on_vdr_sxfe_autostart_clicked          (GtkButton       *button,
                                         gpointer         user_data)
 {
-     system("echo -e '#!/bin/sh\nvdr-xine sxfe' > $HOME/.kde/Autostart/vdr-xine-start;chmod +x $HOME/.kde/Autostart/vdr-xine-start");
+     system("echo -e '#!/bin/sh\n/usr/sbin/vdr-xine sxfe' > $HOME/.kde/Autostart/vdr-xine-start;chmod +x $HOME/.kde/Autostart/vdr-xine-start");
 }
 
 
@@ -78,7 +78,7 @@ on_xine_ui_clicked                     (GtkButton       *button,
     strcpy(IP, gtk_entry_get_text(GTK_ENTRY(entry)));
     vdrip_file("w");  // w for write the file
 
-    system("vdr-xine xine &");
+    system("/usr/sbin/vdr-xine xine &");
 }
 
 
@@ -86,7 +86,7 @@ void
 on_keymap_clicked                      (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("x-terminal-emulator -e vdr-xine-keymap &");
+    system("x-terminal-emulator -e /usr/sbin/vdr-xine-keymap &");
 }
 
 
@@ -94,7 +94,7 @@ void
 on_xine_ui_autostart_clicked           (GtkButton       *button,
                                         gpointer         user_data)
 {
-     system("echo -e '#!/bin/sh\nvdr-xine xine' > $HOME/.kde/Autostart/vdr-xine-start;chmod +x $HOME/.kde/Autostart/vdr-xine-start");
+     system("echo -e '#!/bin/sh\n/usr/sbin/vdr-xine xine' > $HOME/.kde/Autostart/vdr-xine-start;chmod +x $HOME/.kde/Autostart/vdr-xine-start");
 }
 
 
@@ -226,7 +226,7 @@ void
 on_vdradmin_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-   system("vdr-vdradmin &");
+   system("/usr/sbin/vdr-vdradmin &");
 }
 
 
