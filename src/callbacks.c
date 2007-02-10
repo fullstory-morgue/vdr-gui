@@ -11,6 +11,8 @@
 #include "interface.h"
 #include "support.h"
 
+#define MAXLINE 1024
+
 FILE* fp;
 char IP[80], IPfile[80];
 
@@ -49,7 +51,7 @@ on_vdr_sxfe_clicked                    (GtkButton       *button,
     GtkWidget *entry = lookup_widget(GTK_WIDGET(button), "IPEntry");
     strcpy(IP, gtk_entry_get_text(GTK_ENTRY(entry)));
     vdrip_file("w");  // w for write the file
-printf("/usr/sbin/vdr-xine sxfe &\n");
+
     system("/usr/sbin/vdr-xine sxfe &");
 }
 
@@ -186,11 +188,23 @@ void
 on_vdr_autostart_clicked               (GtkButton       *button,
                                         gpointer         user_data)
 {
-   system("su-me \" \
-	update-rc.d -f vdr remove; \
-	update-rc.d -f vdradmin-am remove; \
-	update-rc.d -f vdr defaults 99; \
-	update-rc.d -f vdradmin-am defaults 99\"");
+   char call[MAXLINE], root_or_not[MAXLINE];
+
+   strncpy( call, "update-rc.d -f vdr remove;", MAXLINE);
+   strncat( call, "update-rc.d -f vdradmin-am remove;", MAXLINE);
+   strncat( call, "update-rc.d -f vdr defaults 99;", MAXLINE);
+   strncat( call, "update-rc.d -f vdradmin-am defaults 99", MAXLINE);
+
+   // root check
+   if (!getenv("USER") || strncmp( getenv("USER"), "root", 4 ) == 0 )
+       strncpy( root_or_not, call, MAXLINE);
+   else {
+       strncpy( root_or_not, "su-me \"", MAXLINE);
+       strncat( root_or_not, call, MAXLINE);
+       strncat( root_or_not, "\"", MAXLINE);
+   }
+
+   system( root_or_not );
 }
 
 
@@ -198,9 +212,21 @@ void
 on_vdr_disable_autostart_clicked       (GtkButton       *button,
                                         gpointer         user_data)
 {
-   system("su-me \" \
-	update-rc.d -f vdr remove; \
-	update-rc.d -f vdradmin-am remove\"");
+   char call[MAXLINE], root_or_not[MAXLINE];
+
+   strncpy( call, "update-rc.d -f vdr remove;", MAXLINE);
+   strncat( call, "update-rc.d -f vdradmin-am remove", MAXLINE);
+
+   // root check
+   if (!getenv("USER") || strncmp( getenv("USER"), "root", 4 ) == 0 )
+       strncpy( root_or_not, call, MAXLINE);
+   else {
+       strncpy( root_or_not, "su-me \"", MAXLINE);
+       strncat( root_or_not, call, MAXLINE);
+       strncat( root_or_not, "\"", MAXLINE);
+   }
+
+   system( root_or_not );
 }
 
 
@@ -208,8 +234,24 @@ void
 on_language_automatic_clicked          (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("su-me \"echo '#needed if_file_empty' >> /var/lib/vdr/sidux-vdr/sidux-vdr.conf; \
-            sed -i -e '/LanguageMode/d' -e 'i\LanguageMode = 0' -e '/./d' /var/lib/vdr/sidux-vdr/sidux-vdr.conf\"");
+
+   char call[MAXLINE], root_or_not[MAXLINE];
+
+   strncpy( call, "echo '#needed if_file_empty' >> /var/lib/vdr/sidux-vdr/sidux-vdr.conf;", MAXLINE);
+   strncat( call, "sed -i -e '/LanguageMode/d' -e 'i\\LanguageMode = 0' -e '/./d' /var/lib/vdr/sidux-vdr/sidux-vdr.conf", MAXLINE);
+
+
+   // root check
+   if (!getenv("USER") || strncmp( getenv("USER"), "root", 4 ) == 0 )
+       strncpy( root_or_not, call, MAXLINE);
+   else {
+       strncpy( root_or_not, "su-me \"", MAXLINE);
+       strncat( root_or_not, call, MAXLINE);
+       strncat( root_or_not, "\"", MAXLINE);
+   }
+
+   system( root_or_not );
+
 }
 
 
@@ -217,8 +259,24 @@ void
 on_language_manuel_clicked             (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("su-me \"echo '#needed if_file_empty' >> /var/lib/vdr/sidux-vdr/sidux-vdr.conf; \
-            sed -i -e '/LanguageMode/d' -e 'i\LanguageMode = 1' -e '/./d' /var/lib/vdr/sidux-vdr/sidux-vdr.conf\"");
+
+   char call[MAXLINE], root_or_not[MAXLINE];
+
+   strncpy( call, "echo '#needed if_file_empty' >> /var/lib/vdr/sidux-vdr/sidux-vdr.conf;", MAXLINE);
+   strncat( call, "sed -i -e '/LanguageMode/d' -e 'i\\LanguageMode = 1' -e '/./d' /var/lib/vdr/sidux-vdr/sidux-vdr.conf", MAXLINE);
+
+
+   // root check
+   if (!getenv("USER") || strncmp( getenv("USER"), "root", 4 ) == 0 )
+       strncpy( root_or_not, call, MAXLINE);
+   else {
+       strncpy( root_or_not, "su-me \"", MAXLINE);
+       strncat( root_or_not, call, MAXLINE);
+       strncat( root_or_not, "\"", MAXLINE);
+   }
+
+   system( root_or_not );
+
 }
 
 
