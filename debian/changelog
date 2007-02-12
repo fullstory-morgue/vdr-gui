@@ -1,4 +1,4 @@
-vdr-gui (0.0.7) UNRELEASED; urgency=low
+vdr-gui (0.0.7) unstable; urgency=low
 
   * some run as root fixes 
 
