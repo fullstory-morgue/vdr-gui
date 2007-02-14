@@ -58,6 +58,40 @@ create_window1 (void)
   GtkWidget *image14;
   GtkWidget *label34;
   GtkWidget *label13;
+  GtkWidget *sidux_eventbox1;
+  GtkWidget *image12;
+  GtkWidget *vdr_eventbox2;
+  GtkWidget *image17;
+  GtkWidget *update;
+  GtkWidget *alignment15;
+  GtkWidget *hbox11;
+  GtkWidget *image13;
+  GtkWidget *label32;
+  GtkWidget *Exit;
+  GtkWidget *alignment18;
+  GtkWidget *hbox13;
+  GtkWidget *image15;
+  GtkWidget *label35;
+  GtkWidget *frame1;
+  GtkWidget *alignment1;
+  GtkWidget *fixed4;
+  GtkWidget *vdr_sxfe;
+  GtkWidget *alignment13;
+  GtkWidget *hbox9;
+  GtkWidget *image10;
+  GtkWidget *label30;
+  GtkWidget *vdr_sxfe_disable_autostart;
+  GtkWidget *vdr_sxfe_autostart;
+  GtkWidget *label8;
+  GtkWidget *frame4;
+  GtkWidget *alignment5;
+  GtkWidget *fixed7;
+  GtkWidget *IPEntry;
+  GtkWidget *label39;
+  GtkWidget *allowclient;
+  GtkWidget *network_transport_tcp;
+  GtkWidget *udp_network_transport;
+  GtkWidget *label22;
   GtkWidget *frame5;
   GtkWidget *alignment16;
   GtkWidget *fixed8;
@@ -70,53 +104,7 @@ create_window1 (void)
   GtkWidget *user_manual;
   GtkWidget *fullscreen;
   GtkWidget *label33;
-  GtkWidget *sidux_eventbox1;
-  GtkWidget *image12;
-  GtkWidget *vdr_eventbox2;
-  GtkWidget *image17;
-  GtkWidget *update;
-  GtkWidget *alignment15;
-  GtkWidget *hbox11;
-  GtkWidget *image13;
-  GtkWidget *label32;
-  GtkWidget *frame3;
-  GtkWidget *alignment4;
-  GtkWidget *fixed6;
-  GtkWidget *keymap;
-  GtkWidget *Xine_ui_Autostart;
-  GtkWidget *xine_ui;
-  GtkWidget *alignment14;
-  GtkWidget *hbox10;
-  GtkWidget *image11;
-  GtkWidget *label31;
-  GtkWidget *xine_ui_disable_autostart;
-  GtkWidget *label19;
-  GtkWidget *frame1;
-  GtkWidget *alignment1;
-  GtkWidget *fixed4;
-  GtkWidget *vdr_sxfe_disable_autostart;
-  GtkWidget *vdr_sxfe_autostart;
-  GtkWidget *vdr_sxfe;
-  GtkWidget *alignment13;
-  GtkWidget *hbox9;
-  GtkWidget *image10;
-  GtkWidget *label30;
-  GtkWidget *label8;
   GtkWidget *label37;
-  GtkWidget *Exit;
-  GtkWidget *alignment18;
-  GtkWidget *hbox13;
-  GtkWidget *image15;
-  GtkWidget *label35;
-  GtkWidget *frame4;
-  GtkWidget *alignment5;
-  GtkWidget *fixed7;
-  GtkWidget *allowclient;
-  GtkWidget *udp_network_transport;
-  GtkWidget *network_transport_tcp;
-  GtkWidget *IPEntry;
-  GtkWidget *label39;
-  GtkWidget *label22;
   GtkWidget *label1;
   GtkWidget *fixed9;
   GtkWidget *textview1;
@@ -281,10 +269,200 @@ create_window1 (void)
   gtk_label_set_use_markup (GTK_LABEL (label13), TRUE);
   gtk_label_set_width_chars (GTK_LABEL (label13), 0);
 
+  sidux_eventbox1 = gtk_event_box_new ();
+  gtk_widget_show (sidux_eventbox1);
+  gtk_fixed_put (GTK_FIXED (fixed1), sidux_eventbox1, 32, 0);
+  gtk_widget_set_size_request (sidux_eventbox1, 82, 32);
+  gtk_tooltips_set_tip (tooltips, sidux_eventbox1, _("http://www.sidux.com"), NULL);
+
+  image12 = create_pixmap (window1, "sidux-vdr.png");
+  gtk_widget_show (image12);
+  gtk_container_add (GTK_CONTAINER (sidux_eventbox1), image12);
+  gtk_widget_set_size_request (image12, 82, 32);
+
+  vdr_eventbox2 = gtk_event_box_new ();
+  gtk_widget_show (vdr_eventbox2);
+  gtk_fixed_put (GTK_FIXED (fixed1), vdr_eventbox2, 368, 0);
+  gtk_widget_set_size_request (vdr_eventbox2, 75, 35);
+  gtk_tooltips_set_tip (tooltips, vdr_eventbox2, _("http://www.linuxtv.org/vdrwiki"), NULL);
+
+  image17 = create_pixmap (window1, "vdr-gui.png");
+  gtk_widget_show (image17);
+  gtk_container_add (GTK_CONTAINER (vdr_eventbox2), image17);
+  gtk_widget_set_size_request (image17, 75, 35);
+
+  update = gtk_button_new ();
+  gtk_widget_show (update);
+  gtk_fixed_put (GTK_FIXED (fixed1), update, 176, 0);
+  gtk_widget_set_size_request (update, 128, 32);
+  gtk_container_set_border_width (GTK_CONTAINER (update), 1);
+  gtk_tooltips_set_tip (tooltips, update, _("Update your VDR"), NULL);
+
+  alignment15 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment15);
+  gtk_container_add (GTK_CONTAINER (update), alignment15);
+
+  hbox11 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox11);
+  gtk_container_add (GTK_CONTAINER (alignment15), hbox11);
+
+  image13 = gtk_image_new_from_stock ("gtk-refresh", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image13);
+  gtk_box_pack_start (GTK_BOX (hbox11), image13, FALSE, FALSE, 0);
+
+  label32 = gtk_label_new_with_mnemonic (_("Update"));
+  gtk_widget_show (label32);
+  gtk_box_pack_start (GTK_BOX (hbox11), label32, FALSE, FALSE, 0);
+
+  Exit = gtk_button_new ();
+  gtk_widget_show (Exit);
+  gtk_fixed_put (GTK_FIXED (fixed1), Exit, 408, 384);
+  gtk_widget_set_size_request (Exit, 74, 30);
+  gtk_widget_add_accelerator (Exit, "clicked", accel_group,
+                              GDK_Q, (GdkModifierType) 0,
+                              GTK_ACCEL_VISIBLE);
+  gtk_widget_add_accelerator (Exit, "clicked", accel_group,
+                              GDK_q, (GdkModifierType) 0,
+                              GTK_ACCEL_VISIBLE);
+  gtk_widget_add_accelerator (Exit, "clicked", accel_group,
+                              GDK_Escape, (GdkModifierType) 0,
+                              GTK_ACCEL_VISIBLE);
+
+  alignment18 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment18);
+  gtk_container_add (GTK_CONTAINER (Exit), alignment18);
+
+  hbox13 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox13);
+  gtk_container_add (GTK_CONTAINER (alignment18), hbox13);
+
+  image15 = gtk_image_new_from_stock ("gtk-quit", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image15);
+  gtk_box_pack_start (GTK_BOX (hbox13), image15, FALSE, FALSE, 0);
+
+  label35 = gtk_label_new_with_mnemonic (_("Exit"));
+  gtk_widget_show (label35);
+  gtk_box_pack_start (GTK_BOX (hbox13), label35, FALSE, FALSE, 0);
+
+  frame1 = gtk_frame_new (NULL);
+  gtk_widget_show (frame1);
+  gtk_fixed_put (GTK_FIXED (fixed1), frame1, 0, 48);
+  gtk_widget_set_size_request (frame1, 189, 160);
+  gtk_frame_set_shadow_type (GTK_FRAME (frame1), GTK_SHADOW_IN);
+
+  alignment1 = gtk_alignment_new (0.5, 0.5, 1, 1);
+  gtk_widget_show (alignment1);
+  gtk_container_add (GTK_CONTAINER (frame1), alignment1);
+  gtk_alignment_set_padding (GTK_ALIGNMENT (alignment1), 0, 0, 12, 0);
+
+  fixed4 = gtk_fixed_new ();
+  gtk_widget_show (fixed4);
+  gtk_container_add (GTK_CONTAINER (alignment1), fixed4);
+
+  vdr_sxfe = gtk_button_new ();
+  gtk_widget_show (vdr_sxfe);
+  gtk_fixed_put (GTK_FIXED (fixed4), vdr_sxfe, 0, 8);
+  gtk_widget_set_size_request (vdr_sxfe, 160, 32);
+  gtk_container_set_border_width (GTK_CONTAINER (vdr_sxfe), 1);
+  gtk_tooltips_set_tip (tooltips, vdr_sxfe, _("TV-Picture with xineliboutput Frontend"), NULL);
+  gtk_widget_add_accelerator (vdr_sxfe, "clicked", accel_group,
+                              GDK_Return, (GdkModifierType) 0,
+                              GTK_ACCEL_VISIBLE);
+  gtk_widget_add_accelerator (vdr_sxfe, "clicked", accel_group,
+                              GDK_KP_Enter, (GdkModifierType) 0,
+                              GTK_ACCEL_VISIBLE);
+
+  alignment13 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment13);
+  gtk_container_add (GTK_CONTAINER (vdr_sxfe), alignment13);
+
+  hbox9 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox9);
+  gtk_container_add (GTK_CONTAINER (alignment13), hbox9);
+
+  image10 = gtk_image_new_from_stock ("gtk-network", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image10);
+  gtk_box_pack_start (GTK_BOX (hbox9), image10, FALSE, FALSE, 0);
+
+  label30 = gtk_label_new_with_mnemonic (_("vdr-sxfe (Picture)"));
+  gtk_widget_show (label30);
+  gtk_box_pack_start (GTK_BOX (hbox9), label30, FALSE, FALSE, 0);
+
+  vdr_sxfe_disable_autostart = gtk_button_new_with_mnemonic (_("disable Autostart"));
+  gtk_widget_show (vdr_sxfe_disable_autostart);
+  gtk_fixed_put (GTK_FIXED (fixed4), vdr_sxfe_disable_autostart, 0, 88);
+  gtk_widget_set_size_request (vdr_sxfe_disable_autostart, 160, 24);
+  gtk_container_set_border_width (GTK_CONTAINER (vdr_sxfe_disable_autostart), 1);
+  gtk_tooltips_set_tip (tooltips, vdr_sxfe_disable_autostart, _("disable vdr-sxfe at systemstart"), NULL);
+
+  vdr_sxfe_autostart = gtk_button_new_with_mnemonic (_("vdr-sxfe Autostart"));
+  gtk_widget_show (vdr_sxfe_autostart);
+  gtk_fixed_put (GTK_FIXED (fixed4), vdr_sxfe_autostart, 0, 56);
+  gtk_widget_set_size_request (vdr_sxfe_autostart, 160, 24);
+  gtk_container_set_border_width (GTK_CONTAINER (vdr_sxfe_autostart), 1);
+  gtk_tooltips_set_tip (tooltips, vdr_sxfe_autostart, _("run vdr-sxfe at systemstart (only for KDE)"), NULL);
+
+  label8 = gtk_label_new (_("<b>TV</b>"));
+  gtk_widget_show (label8);
+  gtk_frame_set_label_widget (GTK_FRAME (frame1), label8);
+  gtk_label_set_use_markup (GTK_LABEL (label8), TRUE);
+  gtk_label_set_width_chars (GTK_LABEL (label8), 0);
+
+  frame4 = gtk_frame_new (NULL);
+  gtk_widget_show (frame4);
+  gtk_fixed_put (GTK_FIXED (fixed1), frame4, 208, 48);
+  gtk_widget_set_size_request (frame4, 189, 160);
+  gtk_frame_set_shadow_type (GTK_FRAME (frame4), GTK_SHADOW_IN);
+
+  alignment5 = gtk_alignment_new (0.5, 0.5, 1, 1);
+  gtk_widget_show (alignment5);
+  gtk_container_add (GTK_CONTAINER (frame4), alignment5);
+  gtk_alignment_set_padding (GTK_ALIGNMENT (alignment5), 0, 0, 12, 0);
+
+  fixed7 = gtk_fixed_new ();
+  gtk_widget_show (fixed7);
+  gtk_container_add (GTK_CONTAINER (alignment5), fixed7);
+
+  IPEntry = gtk_entry_new ();
+  gtk_widget_show (IPEntry);
+  gtk_fixed_put (GTK_FIXED (fixed7), IPEntry, 24, 8);
+  gtk_widget_set_size_request (IPEntry, 136, 24);
+  gtk_tooltips_set_tip (tooltips, IPEntry, _("Network IP-Adress from VDR Server, with xineliboutput is only one client possible. For more clients you must use streamdev-plugin. Do this on Client"), NULL);
+  gtk_entry_set_text (GTK_ENTRY (IPEntry), _("localhost"));
+
+  label39 = gtk_label_new (_("IP:"));
+  gtk_widget_show (label39);
+  gtk_fixed_put (GTK_FIXED (fixed7), label39, 0, 8);
+  gtk_widget_set_size_request (label39, 23, 24);
+
+  allowclient = gtk_button_new_with_mnemonic (_("Allow client access"));
+  gtk_widget_show (allowclient);
+  gtk_fixed_put (GTK_FIXED (fixed7), allowclient, 0, 40);
+  gtk_widget_set_size_request (allowclient, 160, 24);
+  gtk_tooltips_set_tip (tooltips, allowclient, _("Allow client connect (insert IP from client). Do this on Server"), NULL);
+
+  network_transport_tcp = gtk_button_new_with_mnemonic (_("TCP network transport"));
+  gtk_widget_show (network_transport_tcp);
+  gtk_fixed_put (GTK_FIXED (fixed7), network_transport_tcp, 0, 80);
+  gtk_widget_set_size_request (network_transport_tcp, 160, 24);
+  gtk_tooltips_set_tip (tooltips, network_transport_tcp, _("TCP network transport. Use this on server or client (default)"), NULL);
+
+  udp_network_transport = gtk_button_new_with_mnemonic (_("UDP network transport"));
+  gtk_widget_show (udp_network_transport);
+  gtk_fixed_put (GTK_FIXED (fixed7), udp_network_transport, 0, 112);
+  gtk_widget_set_size_request (udp_network_transport, 160, 24);
+  gtk_tooltips_set_tip (tooltips, udp_network_transport, _("UDP network transport. Use this on server or client"), NULL);
+
+  label22 = gtk_label_new (_("<b>Streaming</b>"));
+  gtk_widget_show (label22);
+  gtk_frame_set_label_widget (GTK_FRAME (frame4), label22);
+  gtk_label_set_use_markup (GTK_LABEL (label22), TRUE);
+  gtk_label_set_width_chars (GTK_LABEL (label22), 0);
+
   frame5 = gtk_frame_new (NULL);
   gtk_widget_show (frame5);
   gtk_fixed_put (GTK_FIXED (fixed1), frame5, 256, 216);
-  gtk_widget_set_size_request (frame5, 137, 200);
+  gtk_widget_set_size_request (frame5, 140, 200);
   gtk_frame_set_shadow_type (GTK_FRAME (frame5), GTK_SHADOW_IN);
 
   alignment16 = gtk_alignment_new (0.5, 0.5, 1, 1);
@@ -342,266 +520,11 @@ create_window1 (void)
   gtk_label_set_use_markup (GTK_LABEL (label33), TRUE);
   gtk_label_set_width_chars (GTK_LABEL (label33), 0);
 
-  sidux_eventbox1 = gtk_event_box_new ();
-  gtk_widget_show (sidux_eventbox1);
-  gtk_fixed_put (GTK_FIXED (fixed1), sidux_eventbox1, 32, 0);
-  gtk_widget_set_size_request (sidux_eventbox1, 82, 32);
-  gtk_tooltips_set_tip (tooltips, sidux_eventbox1, _("http://www.sidux.com"), NULL);
-
-  image12 = create_pixmap (window1, "sidux-vdr.png");
-  gtk_widget_show (image12);
-  gtk_container_add (GTK_CONTAINER (sidux_eventbox1), image12);
-  gtk_widget_set_size_request (image12, 82, 32);
-
-  vdr_eventbox2 = gtk_event_box_new ();
-  gtk_widget_show (vdr_eventbox2);
-  gtk_fixed_put (GTK_FIXED (fixed1), vdr_eventbox2, 368, 0);
-  gtk_widget_set_size_request (vdr_eventbox2, 75, 35);
-  gtk_tooltips_set_tip (tooltips, vdr_eventbox2, _("http://www.linuxtv.org/vdrwiki"), NULL);
-
-  image17 = create_pixmap (window1, "vdr-gui.png");
-  gtk_widget_show (image17);
-  gtk_container_add (GTK_CONTAINER (vdr_eventbox2), image17);
-  gtk_widget_set_size_request (image17, 75, 35);
-
-  update = gtk_button_new ();
-  gtk_widget_show (update);
-  gtk_fixed_put (GTK_FIXED (fixed1), update, 176, 0);
-  gtk_widget_set_size_request (update, 128, 32);
-  gtk_container_set_border_width (GTK_CONTAINER (update), 1);
-  gtk_tooltips_set_tip (tooltips, update, _("Update your VDR"), NULL);
-
-  alignment15 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment15);
-  gtk_container_add (GTK_CONTAINER (update), alignment15);
-
-  hbox11 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox11);
-  gtk_container_add (GTK_CONTAINER (alignment15), hbox11);
-
-  image13 = gtk_image_new_from_stock ("gtk-refresh", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image13);
-  gtk_box_pack_start (GTK_BOX (hbox11), image13, FALSE, FALSE, 0);
-
-  label32 = gtk_label_new_with_mnemonic (_("Update"));
-  gtk_widget_show (label32);
-  gtk_box_pack_start (GTK_BOX (hbox11), label32, FALSE, FALSE, 0);
-
-  frame3 = gtk_frame_new (NULL);
-  gtk_widget_show (frame3);
-  gtk_fixed_put (GTK_FIXED (fixed1), frame3, 160, 48);
-  gtk_widget_set_size_request (frame3, 151, 159);
-  gtk_frame_set_shadow_type (GTK_FRAME (frame3), GTK_SHADOW_IN);
-
-  alignment4 = gtk_alignment_new (0.5, 0.5, 1, 1);
-  gtk_widget_show (alignment4);
-  gtk_container_add (GTK_CONTAINER (frame3), alignment4);
-  gtk_alignment_set_padding (GTK_ALIGNMENT (alignment4), 0, 0, 12, 0);
-
-  fixed6 = gtk_fixed_new ();
-  gtk_widget_show (fixed6);
-  gtk_container_add (GTK_CONTAINER (alignment4), fixed6);
-
-  keymap = gtk_button_new_with_mnemonic (_("get keymap"));
-  gtk_widget_show (keymap);
-  gtk_fixed_put (GTK_FIXED (fixed6), keymap, 0, 112);
-  gtk_widget_set_size_request (keymap, 128, 24);
-  gtk_container_set_border_width (GTK_CONTAINER (keymap), 1);
-  gtk_tooltips_set_tip (tooltips, keymap, _("Get xine Keyboardlayout for VDR (see ~/.xine/keymap"), NULL);
-
-  Xine_ui_Autostart = gtk_button_new_with_mnemonic (_("xine-ui Autostart"));
-  gtk_widget_show (Xine_ui_Autostart);
-  gtk_fixed_put (GTK_FIXED (fixed6), Xine_ui_Autostart, 0, 48);
-  gtk_widget_set_size_request (Xine_ui_Autostart, 128, 24);
-  gtk_container_set_border_width (GTK_CONTAINER (Xine_ui_Autostart), 1);
-  gtk_tooltips_set_tip (tooltips, Xine_ui_Autostart, _("run xine-ui at systemstart (only for KDE)"), NULL);
-
-  xine_ui = gtk_button_new ();
-  gtk_widget_show (xine_ui);
-  gtk_fixed_put (GTK_FIXED (fixed6), xine_ui, 0, 8);
-  gtk_widget_set_size_request (xine_ui, 128, 32);
-  gtk_container_set_border_width (GTK_CONTAINER (xine_ui), 1);
-  gtk_tooltips_set_tip (tooltips, xine_ui, _("TV-Picture with xine-ui (NOT SUPPORTED)"), NULL);
-
-  alignment14 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment14);
-  gtk_container_add (GTK_CONTAINER (xine_ui), alignment14);
-
-  hbox10 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox10);
-  gtk_container_add (GTK_CONTAINER (alignment14), hbox10);
-
-  image11 = gtk_image_new_from_stock ("gtk-network", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image11);
-  gtk_box_pack_start (GTK_BOX (hbox10), image11, FALSE, FALSE, 0);
-
-  label31 = gtk_label_new_with_mnemonic (_("xine-ui (Picture)"));
-  gtk_widget_show (label31);
-  gtk_box_pack_start (GTK_BOX (hbox10), label31, FALSE, FALSE, 0);
-
-  xine_ui_disable_autostart = gtk_button_new_with_mnemonic (_("disable Autostart"));
-  gtk_widget_show (xine_ui_disable_autostart);
-  gtk_fixed_put (GTK_FIXED (fixed6), xine_ui_disable_autostart, 0, 80);
-  gtk_widget_set_size_request (xine_ui_disable_autostart, 128, 24);
-  gtk_container_set_border_width (GTK_CONTAINER (xine_ui_disable_autostart), 1);
-  gtk_tooltips_set_tip (tooltips, xine_ui_disable_autostart, _("disable xine-ui at systemstart"), NULL);
-
-  label19 = gtk_label_new (_("<b>TV</b> not supported"));
-  gtk_widget_show (label19);
-  gtk_frame_set_label_widget (GTK_FRAME (frame3), label19);
-  gtk_label_set_use_markup (GTK_LABEL (label19), TRUE);
-  gtk_label_set_width_chars (GTK_LABEL (label19), 0);
-
-  frame1 = gtk_frame_new (NULL);
-  gtk_widget_show (frame1);
-  gtk_fixed_put (GTK_FIXED (fixed1), frame1, 0, 48);
-  gtk_widget_set_size_request (frame1, 151, 159);
-  gtk_frame_set_shadow_type (GTK_FRAME (frame1), GTK_SHADOW_IN);
-
-  alignment1 = gtk_alignment_new (0.5, 0.5, 1, 1);
-  gtk_widget_show (alignment1);
-  gtk_container_add (GTK_CONTAINER (frame1), alignment1);
-  gtk_alignment_set_padding (GTK_ALIGNMENT (alignment1), 0, 0, 12, 0);
-
-  fixed4 = gtk_fixed_new ();
-  gtk_widget_show (fixed4);
-  gtk_container_add (GTK_CONTAINER (alignment1), fixed4);
-
-  vdr_sxfe_disable_autostart = gtk_button_new_with_mnemonic (_("disable Autostart"));
-  gtk_widget_show (vdr_sxfe_disable_autostart);
-  gtk_fixed_put (GTK_FIXED (fixed4), vdr_sxfe_disable_autostart, 0, 80);
-  gtk_widget_set_size_request (vdr_sxfe_disable_autostart, 128, 24);
-  gtk_container_set_border_width (GTK_CONTAINER (vdr_sxfe_disable_autostart), 1);
-  gtk_tooltips_set_tip (tooltips, vdr_sxfe_disable_autostart, _("disable vdr-sxfe at systemstart"), NULL);
-
-  vdr_sxfe_autostart = gtk_button_new_with_mnemonic (_("vdr-sxfe Autostart"));
-  gtk_widget_show (vdr_sxfe_autostart);
-  gtk_fixed_put (GTK_FIXED (fixed4), vdr_sxfe_autostart, 0, 48);
-  gtk_widget_set_size_request (vdr_sxfe_autostart, 128, 24);
-  gtk_container_set_border_width (GTK_CONTAINER (vdr_sxfe_autostart), 1);
-  gtk_tooltips_set_tip (tooltips, vdr_sxfe_autostart, _("run vdr-sxfe at systemstart (only for KDE)"), NULL);
-
-  vdr_sxfe = gtk_button_new ();
-  gtk_widget_show (vdr_sxfe);
-  gtk_fixed_put (GTK_FIXED (fixed4), vdr_sxfe, 0, 8);
-  gtk_widget_set_size_request (vdr_sxfe, 128, 32);
-  gtk_container_set_border_width (GTK_CONTAINER (vdr_sxfe), 1);
-  gtk_tooltips_set_tip (tooltips, vdr_sxfe, _("TV-Picture with xineliboutput Frontend"), NULL);
-  gtk_widget_add_accelerator (vdr_sxfe, "clicked", accel_group,
-                              GDK_Return, (GdkModifierType) 0,
-                              GTK_ACCEL_VISIBLE);
-  gtk_widget_add_accelerator (vdr_sxfe, "clicked", accel_group,
-                              GDK_KP_Enter, (GdkModifierType) 0,
-                              GTK_ACCEL_VISIBLE);
-
-  alignment13 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment13);
-  gtk_container_add (GTK_CONTAINER (vdr_sxfe), alignment13);
-
-  hbox9 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox9);
-  gtk_container_add (GTK_CONTAINER (alignment13), hbox9);
-
-  image10 = gtk_image_new_from_stock ("gtk-network", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image10);
-  gtk_box_pack_start (GTK_BOX (hbox9), image10, FALSE, FALSE, 0);
-
-  label30 = gtk_label_new_with_mnemonic (_("vdr-sxfe (Picture)"));
-  gtk_widget_show (label30);
-  gtk_box_pack_start (GTK_BOX (hbox9), label30, FALSE, FALSE, 0);
-
-  label8 = gtk_label_new (_("<b>TV</b>"));
-  gtk_widget_show (label8);
-  gtk_frame_set_label_widget (GTK_FRAME (frame1), label8);
-  gtk_label_set_use_markup (GTK_LABEL (label8), TRUE);
-  gtk_label_set_width_chars (GTK_LABEL (label8), 0);
-
   label37 = gtk_label_new (_("by\nHorst  J. Tritremmel (hjt)"));
   gtk_widget_show (label37);
-  gtk_fixed_put (GTK_FIXED (fixed1), label37, 432, 224);
-  gtk_widget_set_size_request (label37, 45, 141);
+  gtk_fixed_put (GTK_FIXED (fixed1), label37, 416, 56);
+  gtk_widget_set_size_request (label37, 45, 157);
   gtk_label_set_angle (GTK_LABEL (label37), 270);
-
-  Exit = gtk_button_new ();
-  gtk_widget_show (Exit);
-  gtk_fixed_put (GTK_FIXED (fixed1), Exit, 408, 384);
-  gtk_widget_set_size_request (Exit, 74, 30);
-  gtk_widget_add_accelerator (Exit, "clicked", accel_group,
-                              GDK_Q, (GdkModifierType) 0,
-                              GTK_ACCEL_VISIBLE);
-  gtk_widget_add_accelerator (Exit, "clicked", accel_group,
-                              GDK_q, (GdkModifierType) 0,
-                              GTK_ACCEL_VISIBLE);
-  gtk_widget_add_accelerator (Exit, "clicked", accel_group,
-                              GDK_Escape, (GdkModifierType) 0,
-                              GTK_ACCEL_VISIBLE);
-
-  alignment18 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment18);
-  gtk_container_add (GTK_CONTAINER (Exit), alignment18);
-
-  hbox13 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox13);
-  gtk_container_add (GTK_CONTAINER (alignment18), hbox13);
-
-  image15 = gtk_image_new_from_stock ("gtk-quit", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image15);
-  gtk_box_pack_start (GTK_BOX (hbox13), image15, FALSE, FALSE, 0);
-
-  label35 = gtk_label_new_with_mnemonic (_("Exit"));
-  gtk_widget_show (label35);
-  gtk_box_pack_start (GTK_BOX (hbox13), label35, FALSE, FALSE, 0);
-
-  frame4 = gtk_frame_new (NULL);
-  gtk_widget_show (frame4);
-  gtk_fixed_put (GTK_FIXED (fixed1), frame4, 328, 48);
-  gtk_widget_set_size_request (frame4, 151, 159);
-  gtk_frame_set_shadow_type (GTK_FRAME (frame4), GTK_SHADOW_IN);
-
-  alignment5 = gtk_alignment_new (0.5, 0.5, 1, 1);
-  gtk_widget_show (alignment5);
-  gtk_container_add (GTK_CONTAINER (frame4), alignment5);
-  gtk_alignment_set_padding (GTK_ALIGNMENT (alignment5), 0, 0, 12, 0);
-
-  fixed7 = gtk_fixed_new ();
-  gtk_widget_show (fixed7);
-  gtk_container_add (GTK_CONTAINER (alignment5), fixed7);
-
-  allowclient = gtk_button_new_with_mnemonic (_("Allow client access"));
-  gtk_widget_show (allowclient);
-  gtk_fixed_put (GTK_FIXED (fixed7), allowclient, 0, 40);
-  gtk_widget_set_size_request (allowclient, 128, 24);
-  gtk_tooltips_set_tip (tooltips, allowclient, _("Allow client connect (insert IP from client). Do this on Server"), NULL);
-
-  udp_network_transport = gtk_button_new_with_mnemonic (_("UDP network transport"));
-  gtk_widget_show (udp_network_transport);
-  gtk_fixed_put (GTK_FIXED (fixed7), udp_network_transport, 0, 112);
-  gtk_widget_set_size_request (udp_network_transport, 128, 24);
-  gtk_tooltips_set_tip (tooltips, udp_network_transport, _("UDP network transport. Use this on server or client"), NULL);
-
-  network_transport_tcp = gtk_button_new_with_mnemonic (_("TCP network transport"));
-  gtk_widget_show (network_transport_tcp);
-  gtk_fixed_put (GTK_FIXED (fixed7), network_transport_tcp, 0, 80);
-  gtk_widget_set_size_request (network_transport_tcp, 128, 24);
-  gtk_tooltips_set_tip (tooltips, network_transport_tcp, _("TCP network transport. Use this on server or client (default)"), NULL);
-
-  IPEntry = gtk_entry_new ();
-  gtk_widget_show (IPEntry);
-  gtk_fixed_put (GTK_FIXED (fixed7), IPEntry, 24, 8);
-  gtk_widget_set_size_request (IPEntry, 102, 24);
-  gtk_tooltips_set_tip (tooltips, IPEntry, _("Network IP-Adress from VDR Server, with xineliboutput is only one client possible. For more clients you must use streamdev-plugin. Do this on Client"), NULL);
-  gtk_entry_set_text (GTK_ENTRY (IPEntry), _("localhost"));
-
-  label39 = gtk_label_new (_("IP:"));
-  gtk_widget_show (label39);
-  gtk_fixed_put (GTK_FIXED (fixed7), label39, 0, 8);
-  gtk_widget_set_size_request (label39, 23, 24);
-
-  label22 = gtk_label_new (_("<b>Streaming</b>"));
-  gtk_widget_show (label22);
-  gtk_frame_set_label_widget (GTK_FRAME (frame4), label22);
-  gtk_label_set_use_markup (GTK_LABEL (label22), TRUE);
-  gtk_label_set_width_chars (GTK_LABEL (label22), 0);
 
   label1 = gtk_label_new (_("Action"));
   gtk_widget_show (label1);
@@ -684,6 +607,42 @@ create_window1 (void)
   g_signal_connect ((gpointer) channelslist, "clicked",
                     G_CALLBACK (on_channelslist_clicked),
                     NULL);
+  g_signal_connect ((gpointer) sidux_eventbox1, "button_press_event",
+                    G_CALLBACK (on_sidux_eventbox1_button_press_event),
+                    NULL);
+  g_signal_connect ((gpointer) vdr_eventbox2, "button_press_event",
+                    G_CALLBACK (on_vdr_eventbox2_button_press_event),
+                    NULL);
+  g_signal_connect ((gpointer) update, "clicked",
+                    G_CALLBACK (on_update_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) Exit, "clicked",
+                    G_CALLBACK (gtk_main_quit),
+                    NULL);
+  g_signal_connect ((gpointer) vdr_sxfe, "clicked",
+                    G_CALLBACK (on_vdr_sxfe_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) vdr_sxfe, "clicked",
+                    G_CALLBACK (gtk_main_quit),
+                    NULL);
+  g_signal_connect ((gpointer) vdr_sxfe_disable_autostart, "clicked",
+                    G_CALLBACK (on_vdr_sxfe_disable_autostart_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) vdr_sxfe_autostart, "clicked",
+                    G_CALLBACK (on_vdr_sxfe_autostart_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) IPEntry, "activate",
+                    G_CALLBACK (on_IPEntry_activate),
+                    NULL);
+  g_signal_connect ((gpointer) allowclient, "clicked",
+                    G_CALLBACK (on_allowclient_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) network_transport_tcp, "clicked",
+                    G_CALLBACK (on_network_transport_tcp_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) udp_network_transport, "clicked",
+                    G_CALLBACK (on_udp_network_transport_clicked),
+                    NULL);
   g_signal_connect ((gpointer) fullscreenoff, "clicked",
                     G_CALLBACK (on_fullscreenoff_clicked),
                     NULL);
@@ -695,57 +654,6 @@ create_window1 (void)
                     NULL);
   g_signal_connect ((gpointer) fullscreen, "clicked",
                     G_CALLBACK (on_fullscreen_clicked),
-                    NULL);
-  g_signal_connect ((gpointer) sidux_eventbox1, "button_press_event",
-                    G_CALLBACK (on_sidux_eventbox1_button_press_event),
-                    NULL);
-  g_signal_connect ((gpointer) vdr_eventbox2, "button_press_event",
-                    G_CALLBACK (on_vdr_eventbox2_button_press_event),
-                    NULL);
-  g_signal_connect ((gpointer) update, "clicked",
-                    G_CALLBACK (on_update_clicked),
-                    NULL);
-  g_signal_connect ((gpointer) keymap, "clicked",
-                    G_CALLBACK (on_keymap_clicked),
-                    NULL);
-  g_signal_connect ((gpointer) Xine_ui_Autostart, "clicked",
-                    G_CALLBACK (on_xine_ui_autostart_clicked),
-                    NULL);
-  g_signal_connect ((gpointer) xine_ui, "clicked",
-                    G_CALLBACK (on_xine_ui_clicked),
-                    NULL);
-  g_signal_connect ((gpointer) xine_ui, "clicked",
-                    G_CALLBACK (gtk_main_quit),
-                    NULL);
-  g_signal_connect ((gpointer) xine_ui_disable_autostart, "clicked",
-                    G_CALLBACK (on_xine_ui_disable_autostart_clicked),
-                    NULL);
-  g_signal_connect ((gpointer) vdr_sxfe_disable_autostart, "clicked",
-                    G_CALLBACK (on_vdr_sxfe_disable_autostart_clicked),
-                    NULL);
-  g_signal_connect ((gpointer) vdr_sxfe_autostart, "clicked",
-                    G_CALLBACK (on_vdr_sxfe_autostart_clicked),
-                    NULL);
-  g_signal_connect ((gpointer) vdr_sxfe, "clicked",
-                    G_CALLBACK (on_vdr_sxfe_clicked),
-                    NULL);
-  g_signal_connect ((gpointer) vdr_sxfe, "clicked",
-                    G_CALLBACK (gtk_main_quit),
-                    NULL);
-  g_signal_connect ((gpointer) Exit, "clicked",
-                    G_CALLBACK (gtk_main_quit),
-                    NULL);
-  g_signal_connect ((gpointer) allowclient, "clicked",
-                    G_CALLBACK (on_allowclient_clicked),
-                    NULL);
-  g_signal_connect ((gpointer) udp_network_transport, "clicked",
-                    G_CALLBACK (on_udp_network_transport_clicked),
-                    NULL);
-  g_signal_connect ((gpointer) network_transport_tcp, "clicked",
-                    G_CALLBACK (on_network_transport_tcp_clicked),
-                    NULL);
-  g_signal_connect ((gpointer) IPEntry, "activate",
-                    G_CALLBACK (on_IPEntry_activate),
                     NULL);
   g_signal_connect ((gpointer) button1, "clicked",
                     G_CALLBACK (gtk_main_quit),
@@ -780,6 +688,40 @@ create_window1 (void)
   GLADE_HOOKUP_OBJECT (window1, image14, "image14");
   GLADE_HOOKUP_OBJECT (window1, label34, "label34");
   GLADE_HOOKUP_OBJECT (window1, label13, "label13");
+  GLADE_HOOKUP_OBJECT (window1, sidux_eventbox1, "sidux_eventbox1");
+  GLADE_HOOKUP_OBJECT (window1, image12, "image12");
+  GLADE_HOOKUP_OBJECT (window1, vdr_eventbox2, "vdr_eventbox2");
+  GLADE_HOOKUP_OBJECT (window1, image17, "image17");
+  GLADE_HOOKUP_OBJECT (window1, update, "update");
+  GLADE_HOOKUP_OBJECT (window1, alignment15, "alignment15");
+  GLADE_HOOKUP_OBJECT (window1, hbox11, "hbox11");
+  GLADE_HOOKUP_OBJECT (window1, image13, "image13");
+  GLADE_HOOKUP_OBJECT (window1, label32, "label32");
+  GLADE_HOOKUP_OBJECT (window1, Exit, "Exit");
+  GLADE_HOOKUP_OBJECT (window1, alignment18, "alignment18");
+  GLADE_HOOKUP_OBJECT (window1, hbox13, "hbox13");
+  GLADE_HOOKUP_OBJECT (window1, image15, "image15");
+  GLADE_HOOKUP_OBJECT (window1, label35, "label35");
+  GLADE_HOOKUP_OBJECT (window1, frame1, "frame1");
+  GLADE_HOOKUP_OBJECT (window1, alignment1, "alignment1");
+  GLADE_HOOKUP_OBJECT (window1, fixed4, "fixed4");
+  GLADE_HOOKUP_OBJECT (window1, vdr_sxfe, "vdr_sxfe");
+  GLADE_HOOKUP_OBJECT (window1, alignment13, "alignment13");
+  GLADE_HOOKUP_OBJECT (window1, hbox9, "hbox9");
+  GLADE_HOOKUP_OBJECT (window1, image10, "image10");
+  GLADE_HOOKUP_OBJECT (window1, label30, "label30");
+  GLADE_HOOKUP_OBJECT (window1, vdr_sxfe_disable_autostart, "vdr_sxfe_disable_autostart");
+  GLADE_HOOKUP_OBJECT (window1, vdr_sxfe_autostart, "vdr_sxfe_autostart");
+  GLADE_HOOKUP_OBJECT (window1, label8, "label8");
+  GLADE_HOOKUP_OBJECT (window1, frame4, "frame4");
+  GLADE_HOOKUP_OBJECT (window1, alignment5, "alignment5");
+  GLADE_HOOKUP_OBJECT (window1, fixed7, "fixed7");
+  GLADE_HOOKUP_OBJECT (window1, IPEntry, "IPEntry");
+  GLADE_HOOKUP_OBJECT (window1, label39, "label39");
+  GLADE_HOOKUP_OBJECT (window1, allowclient, "allowclient");
+  GLADE_HOOKUP_OBJECT (window1, network_transport_tcp, "network_transport_tcp");
+  GLADE_HOOKUP_OBJECT (window1, udp_network_transport, "udp_network_transport");
+  GLADE_HOOKUP_OBJECT (window1, label22, "label22");
   GLADE_HOOKUP_OBJECT (window1, frame5, "frame5");
   GLADE_HOOKUP_OBJECT (window1, alignment16, "alignment16");
   GLADE_HOOKUP_OBJECT (window1, fixed8, "fixed8");
@@ -792,53 +734,7 @@ create_window1 (void)
   GLADE_HOOKUP_OBJECT (window1, user_manual, "user_manual");
   GLADE_HOOKUP_OBJECT (window1, fullscreen, "fullscreen");
   GLADE_HOOKUP_OBJECT (window1, label33, "label33");
-  GLADE_HOOKUP_OBJECT (window1, sidux_eventbox1, "sidux_eventbox1");
-  GLADE_HOOKUP_OBJECT (window1, image12, "image12");
-  GLADE_HOOKUP_OBJECT (window1, vdr_eventbox2, "vdr_eventbox2");
-  GLADE_HOOKUP_OBJECT (window1, image17, "image17");
-  GLADE_HOOKUP_OBJECT (window1, update, "update");
-  GLADE_HOOKUP_OBJECT (window1, alignment15, "alignment15");
-  GLADE_HOOKUP_OBJECT (window1, hbox11, "hbox11");
-  GLADE_HOOKUP_OBJECT (window1, image13, "image13");
-  GLADE_HOOKUP_OBJECT (window1, label32, "label32");
-  GLADE_HOOKUP_OBJECT (window1, frame3, "frame3");
-  GLADE_HOOKUP_OBJECT (window1, alignment4, "alignment4");
-  GLADE_HOOKUP_OBJECT (window1, fixed6, "fixed6");
-  GLADE_HOOKUP_OBJECT (window1, keymap, "keymap");
-  GLADE_HOOKUP_OBJECT (window1, Xine_ui_Autostart, "Xine_ui_Autostart");
-  GLADE_HOOKUP_OBJECT (window1, xine_ui, "xine_ui");
-  GLADE_HOOKUP_OBJECT (window1, alignment14, "alignment14");
-  GLADE_HOOKUP_OBJECT (window1, hbox10, "hbox10");
-  GLADE_HOOKUP_OBJECT (window1, image11, "image11");
-  GLADE_HOOKUP_OBJECT (window1, label31, "label31");
-  GLADE_HOOKUP_OBJECT (window1, xine_ui_disable_autostart, "xine_ui_disable_autostart");
-  GLADE_HOOKUP_OBJECT (window1, label19, "label19");
-  GLADE_HOOKUP_OBJECT (window1, frame1, "frame1");
-  GLADE_HOOKUP_OBJECT (window1, alignment1, "alignment1");
-  GLADE_HOOKUP_OBJECT (window1, fixed4, "fixed4");
-  GLADE_HOOKUP_OBJECT (window1, vdr_sxfe_disable_autostart, "vdr_sxfe_disable_autostart");
-  GLADE_HOOKUP_OBJECT (window1, vdr_sxfe_autostart, "vdr_sxfe_autostart");
-  GLADE_HOOKUP_OBJECT (window1, vdr_sxfe, "vdr_sxfe");
-  GLADE_HOOKUP_OBJECT (window1, alignment13, "alignment13");
-  GLADE_HOOKUP_OBJECT (window1, hbox9, "hbox9");
-  GLADE_HOOKUP_OBJECT (window1, image10, "image10");
-  GLADE_HOOKUP_OBJECT (window1, label30, "label30");
-  GLADE_HOOKUP_OBJECT (window1, label8, "label8");
   GLADE_HOOKUP_OBJECT (window1, label37, "label37");
-  GLADE_HOOKUP_OBJECT (window1, Exit, "Exit");
-  GLADE_HOOKUP_OBJECT (window1, alignment18, "alignment18");
-  GLADE_HOOKUP_OBJECT (window1, hbox13, "hbox13");
-  GLADE_HOOKUP_OBJECT (window1, image15, "image15");
-  GLADE_HOOKUP_OBJECT (window1, label35, "label35");
-  GLADE_HOOKUP_OBJECT (window1, frame4, "frame4");
-  GLADE_HOOKUP_OBJECT (window1, alignment5, "alignment5");
-  GLADE_HOOKUP_OBJECT (window1, fixed7, "fixed7");
-  GLADE_HOOKUP_OBJECT (window1, allowclient, "allowclient");
-  GLADE_HOOKUP_OBJECT (window1, udp_network_transport, "udp_network_transport");
-  GLADE_HOOKUP_OBJECT (window1, network_transport_tcp, "network_transport_tcp");
-  GLADE_HOOKUP_OBJECT (window1, IPEntry, "IPEntry");
-  GLADE_HOOKUP_OBJECT (window1, label39, "label39");
-  GLADE_HOOKUP_OBJECT (window1, label22, "label22");
   GLADE_HOOKUP_OBJECT (window1, label1, "label1");
   GLADE_HOOKUP_OBJECT (window1, fixed9, "fixed9");
   GLADE_HOOKUP_OBJECT (window1, textview1, "textview1");
