@@ -1,4 +1,4 @@
-vdr-gui (0.0.9) UNRELEASED; urgency=low
+vdr-gui (0.0.9) unstable; urgency=low
 
   * remove xine-ui support 
 
