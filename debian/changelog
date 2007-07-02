@@ -1,9 +1,5 @@
-vdr-gui (0.0.10) UNRELEASED; urgency=low
+vdr-gui (0.0.10) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Horst Tritremmel ]
   * Buttonsize changed 
 
  -- Horst Tritremmel <hjt@sidux.com>  Mon, 02 Jul 2007 14:28:57 +0200
@@ -14,35 +10,23 @@ vdr-gui (0.0.9) unstable; urgency=low
 
  -- Horst Tritremmel <peter_weber69@gmx.at>  Wed, 14 Feb 2007 09:49:16 +0100
 
-vdr-gui (0.0.8) UNRELEASED; urgency=low
-
-  * NOT RELEASED YET
-
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 13 Feb 2007 00:47:19 +0100
-
 vdr-gui (0.0.7) unstable; urgency=low
 
   * some run as root fixes 
 
  -- Horst Tritremmel <peter_weber69@gmx.at>  Sat, 10 Feb 2007 21:48:16 +0100
 
-vdr-gui (0.0.6) UNRELEASED; urgency=low
+vdr-gui (0.0.6) unstable; urgency=low
 
   * if root start vdr_autostart bugfix 
 
  -- hjt <hjt@siduxlap>  Fri,  9 Feb 2007 23:09:29 +0100
 
-vdr-gui (0.0.5) UNRELEASED; urgency=low
+vdr-gui (0.0.5) unstable; urgency=low
 
   * system call bug fix (/usr/sbin not found) 
 
  -- hjt <hjt@siduxlap>  Fri,  9 Feb 2007 22:52:52 +0100
-
-vdr-gui (0.0.4) UNRELEASED; urgency=low
-
-  * NOT RELEASED YET
-
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue,  6 Feb 2007 17:11:46 +0100
 
 vdr-gui (0.0.3) unstable; urgency=low
 
