@@ -1,8 +1,9 @@
 vdr-gui (0.0.11) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * fix changelog.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 03 Jul 2007 01:40:43 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 03 Jul 2007 01:42:26 +0200
 
 vdr-gui (0.0.10) unstable; urgency=low
 
@@ -31,13 +32,13 @@ vdr-gui (0.0.6) unstable; urgency=low
 
   * if root start vdr_autostart bugfix 
 
- -- hjt <hjt@siduxlap>  Fri,  9 Feb 2007 23:09:29 +0100
+ -- Horst Tritremmel <hjt@sidux.com>  Fri,  9 Feb 2007 23:09:29 +0100
 
 vdr-gui (0.0.5) unstable; urgency=low
 
   * system call bug fix (/usr/sbin not found) 
 
- -- hjt <hjt@siduxlap>  Fri,  9 Feb 2007 22:52:52 +0100
+ -- Horst Tritremmel <hjt@sidux.com>  Fri,  9 Feb 2007 22:52:52 +0100
 
 vdr-gui (0.0.3) unstable; urgency=low
 
