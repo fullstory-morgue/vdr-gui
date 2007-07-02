@@ -5,8 +5,9 @@ vdr-gui (0.0.10) unstable; urgency=low
 
   [ Stefan Lippers-Hollmann ]
   * fix automake.
+  * build-depend on automake1.9.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 03 Jul 2007 01:32:20 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 03 Jul 2007 01:36:31 +0200
 
 vdr-gui (0.0.9) unstable; urgency=low
 
