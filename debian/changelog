@@ -1,9 +1,9 @@
-vdr-gui (0.0.11) UNRELEASED; urgency=low
+vdr-gui (0.0.11) unstable; urgency=low
 
-  * NOT RELEASED YET
   * fix changelog.
+  * move to automake1.10.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 03 Jul 2007 01:42:26 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 06 Jul 2007 01:29:04 +0200
 
 vdr-gui (0.0.10) unstable; urgency=low
 
