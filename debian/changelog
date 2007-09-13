@@ -1,9 +1,9 @@
-vdr-gui (0.0.12) UNRELEASED; urgency=low
+vdr-gui (0.0.12) unstable; urgency=low
 
-  * NOT RELEASED YET
   * add VCS control headers.
+  * fix clean target.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 11 Sep 2007 20:26:13 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 13 Sep 2007 14:17:57 +0200
 
 vdr-gui (0.0.11) unstable; urgency=low
 
