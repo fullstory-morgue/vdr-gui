@@ -137,7 +137,7 @@ msgid "<b>Others</b>"
 msgstr ""
 
 #: ../src/interface.c:349
-msgid "http://www.sidux.com"
+msgid "http://sidux.com"
 msgstr ""
 
 #: ../src/interface.c:360

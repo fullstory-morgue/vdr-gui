@@ -42,7 +42,7 @@
 	      <property name="width_request">82</property>
 	      <property name="height_request">32</property>
 	      <property name="visible">True</property>
-	      <property name="tooltip" translatable="yes">http://www.sidux.com</property>
+	      <property name="tooltip" translatable="yes">http://sidux.com</property>
 	      <property name="visible_window">True</property>
 	      <property name="above_child">False</property>
 	      <signal name="button_press_event" handler="on_sidux_eventbox1_button_press_event" last_modification_time="Thu, 07 Dec 2006 20:24:21 GMT"/>

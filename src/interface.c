@@ -144,7 +144,7 @@ create_window1 (void)
   gtk_widget_show (sidux_eventbox1);
   gtk_fixed_put (GTK_FIXED (fixed1), sidux_eventbox1, 32, 0);
   gtk_widget_set_size_request (sidux_eventbox1, 82, 32);
-  gtk_tooltips_set_tip (tooltips, sidux_eventbox1, _("http://www.sidux.com"), NULL);
+  gtk_tooltips_set_tip (tooltips, sidux_eventbox1, _("http://sidux.com"), NULL);
 
   image12 = create_pixmap (window1, "sidux-vdr.png");
   gtk_widget_show (image12);

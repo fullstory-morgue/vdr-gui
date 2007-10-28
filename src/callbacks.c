@@ -334,9 +334,9 @@ on_sidux_eventbox1_button_press_event  (GtkWidget       *widget,
                                         gpointer         user_data)
 {
      system("if [ $(echo $LANGUAGE|cut -c1-2) = de ]; then \
-                    x-www-browser 'http://www.sidux.com/index.php?&newlang=deu' & \
+                    x-www-browser 'http://sidux.com/index.php?&newlang=deu' & \
               else \
-                    x-www-browser 'http://www.sidux.com/index.php?&newlang=eng' & \
+                    x-www-browser 'http://sidux.com/index.php?&newlang=eng' & \
               fi");
 
      return FALSE;

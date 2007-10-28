@@ -158,7 +158,7 @@ msgid "&lt;b&gt;Others&lt;/b&gt;"
 msgstr ""
 
 #: vdr-gui.glade:803(property) 
-msgid "http://www.sidux.com"
+msgid "http://sidux.com"
 msgstr ""
 
 #: vdr-gui.glade:832(property) 
