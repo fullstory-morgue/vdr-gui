@@ -1,8 +1,9 @@
 vdr-gui (0.1.2) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * COPYING belongs into the upstream source.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 28 Oct 2007 16:32:12 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 10 Nov 2007 14:22:38 +0100
 
 vdr-gui (0.1.1) unstable; urgency=low
 
