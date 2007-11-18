@@ -15,7 +15,7 @@ msgstr ""
 
 #: ../src/interface.c:137
 msgid "VDR-GUI"
-msgstr "VDR-GU"
+msgstr "VDR-GUI"
 
 #: ../src/interface.c:174
 msgid "start VDR"
