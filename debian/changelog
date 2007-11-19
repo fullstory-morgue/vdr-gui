@@ -1,6 +1,5 @@
-vdr-gui (0.1.3) UNRELEASED; urgency=low
+vdr-gui (0.1.3) unstable; urgency=low
 
-  * NOT RELEASED YET
   * fix german localisation.
 
  -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 18 Nov 2007 18:55:03 +0100
