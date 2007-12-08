@@ -1,8 +1,8 @@
-vdr-gui (0.1.5) UNRELEASED; urgency=low
+vdr-gui (0.1.5) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * fix debian/copyright.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 09 Dec 2007 00:19:03 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 09 Dec 2007 00:22:31 +0100
 
 vdr-gui (0.1.4) unstable; urgency=low
 
