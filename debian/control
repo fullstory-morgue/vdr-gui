@@ -9,6 +9,6 @@ Vcs-Browser: http://svn.berlios.de/wsvn/fullstory/vdr-gui/trunk/
 
 Package: vdr-gui
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, sidux-vdr (>= 1.2.11)
+Depends: ${shlibs:Depends}, ${misc:Depends}, sidux-vdr (>= 1.2.11), menu
 Description: GUI for Video Disc Recorder (VDR)
  This is a gui for a simply vdr handling

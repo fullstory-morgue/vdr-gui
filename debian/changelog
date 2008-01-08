@@ -1,8 +1,9 @@
-vdr-gui (0.1.6) UNRELEASED; urgency=low
+vdr-gui (0.2.0) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * switch from custom su-me to generic su-to-root, adapt dependencies and
+    menu files accordingly.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 09 Dec 2007 00:24:33 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 08 Jan 2008 23:19:37 +0100
 
 vdr-gui (0.1.5) unstable; urgency=low
 

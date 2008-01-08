@@ -130,7 +130,7 @@ void
 on_allowclient_clicked                 (GtkButton       *button,
                                         gpointer         user_data)
 {
-   system("su-me kwrite /etc/vdr/plugins/streamdevhosts.conf /etc/vdr/svdrphosts.conf &");
+   system("su-to-root -X -c \"/usr/bin/kate /etc/vdr/plugins/streamdevhosts.conf /etc/vdr/svdrphosts.conf &\"");
 }
 
 
@@ -148,7 +148,7 @@ void
 on_vdr_start_clicked                   (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("su-me x-terminal-emulator -e /usr/sbin/vdr-start");
+    system("su-to-root -X -c \"/usr/bin/x-terminal-emulator -e /usr/sbin/vdr-start\"");
 }
 
 
@@ -156,7 +156,7 @@ void
 on_vdr_stop_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("su-me x-terminal-emulator -e /usr/sbin/vdr-stop");
+    system("su-to-root -X -c \"x-terminal-emulator -e /usr/sbin/vdr-stop\"");
 }
 
 
@@ -164,7 +164,7 @@ void
 on_channelslist_clicked                (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("su-me /usr/sbin/vdr-channelswitch");
+    system("su-to-root -X -c \"/usr/sbin/vdr-channelswitch\"");
 }
 
 
@@ -172,7 +172,7 @@ void
 on_wpvrscan_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("su-me x-terminal-emulator -e /usr/sbin/vdr-w_pvrscan pvrinput");
+    system("su-to-root -X -c \"x-terminal-emulator -e /usr/sbin/vdr-w_pvrscan pvrinput\"");
 }
 
 
@@ -180,7 +180,7 @@ void
 on_videodir_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("su-me x-terminal-emulator -e /usr/sbin/vdr-videodir");
+    system("su-to-root -X -c \"x-terminal-emulator -e /usr/sbin/vdr-videodir\"");
 }
 
 
@@ -199,7 +199,7 @@ on_vdr_autostart_clicked               (GtkButton       *button,
    if (!getenv("USER") || strncmp( getenv("USER"), "root", 4 ) == 0 )
        strncpy( root_or_not, call, MAXLINE);
    else {
-       strncpy( root_or_not, "su-me \"", MAXLINE);
+       strncpy( root_or_not, "su-to-root -X -c \"", MAXLINE);
        strncat( root_or_not, call, MAXLINE);
        strncat( root_or_not, "\"", MAXLINE);
    }
@@ -221,7 +221,7 @@ on_vdr_disable_autostart_clicked       (GtkButton       *button,
    if (!getenv("USER") || strncmp( getenv("USER"), "root", 4 ) == 0 )
        strncpy( root_or_not, call, MAXLINE);
    else {
-       strncpy( root_or_not, "su-me \"", MAXLINE);
+       strncpy( root_or_not, "su-to-root -X -c \"", MAXLINE);
        strncat( root_or_not, call, MAXLINE);
        strncat( root_or_not, "\"", MAXLINE);
    }
@@ -245,7 +245,7 @@ on_language_automatic_clicked          (GtkButton       *button,
    if (!getenv("USER") || strncmp( getenv("USER"), "root", 4 ) == 0 )
        strncpy( root_or_not, call, MAXLINE);
    else {
-       strncpy( root_or_not, "su-me \"", MAXLINE);
+       strncpy( root_or_not, "su-to-root -X -c \"", MAXLINE);
        strncat( root_or_not, call, MAXLINE);
        strncat( root_or_not, "\"", MAXLINE);
    }
@@ -270,7 +270,7 @@ on_language_manuel_clicked             (GtkButton       *button,
    if (!getenv("USER") || strncmp( getenv("USER"), "root", 4 ) == 0 )
        strncpy( root_or_not, call, MAXLINE);
    else {
-       strncpy( root_or_not, "su-me \"", MAXLINE);
+       strncpy( root_or_not, "su-to-root -X -c \"", MAXLINE);
        strncat( root_or_not, call, MAXLINE);
        strncat( root_or_not, "\"", MAXLINE);
    }
@@ -324,7 +324,7 @@ void
 on_update_clicked                      (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("su-me x-terminal-emulator -e /usr/sbin/vdr-update");
+    system("su-to-root -X -c \"x-terminal-emulator -e /usr/sbin/vdr-update\"");
 }
 
 
