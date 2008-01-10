@@ -130,7 +130,19 @@ void
 on_allowclient_clicked                 (GtkButton       *button,
                                         gpointer         user_data)
 {
-   system("su-to-root -X -c \"/usr/bin/kate /etc/vdr/plugins/streamdevhosts.conf /etc/vdr/svdrphosts.conf &\"");
+     char syscall[MAXLINE];
+
+     strncpy( syscall, "#!/bin/bash\n", MAXLINE);
+     strncat( syscall, "EDITOR=$(which kwrite)\n", MAXLINE);
+     strncat( syscall, "[ -z \"$EDITOR\" ] && EDITOR=$(which gedit)\n", MAXLINE);
+     strncat( syscall, "[ -z \"$EDITOR\" ] && EDITOR=$(which mousepad)\n", MAXLINE);
+     strncat( syscall, "[ -z \"$EDITOR\" ] && EDITOR=x-terminal-emulator -e vi \n", MAXLINE);
+     strncat( syscall, "su-to-root -X -c \"$EDITOR /etc/vdr/plugins/streamdevhosts.conf /etc/vdr/svdrphosts.conf\" &", MAXLINE);
+
+
+     system( syscall);
+
+     //system("su-to-root -X -c \"/usr/bin/kate \"/etc/vdr/plugins/streamdevhosts.conf /etc/vdr/svdrphosts.conf &\"");
 }
 
 
