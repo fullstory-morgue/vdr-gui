@@ -1,8 +1,9 @@
 vdr-gui (0.2.2) unstable; urgency=low
 
   * update to debhelper compat 6.
+  * add myself to Uploaders.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 19 Jan 2008 02:52:55 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 19 Jan 2008 02:55:13 +0100
 
 vdr-gui (0.2.1) unstable; urgency=low
 
