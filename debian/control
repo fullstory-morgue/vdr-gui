@@ -2,7 +2,7 @@ Source: vdr-gui
 Section: misc
 Priority: extra
 Maintainer: Horst Tritremmel <peter_weber69@gmx.at>
-Build-Depends: debhelper (>= 5), automake1.10, autotools-dev, libgtk2.0-dev, libglade2-dev
+Build-Depends: debhelper (>= 6), automake1.10, autotools-dev, libgtk2.0-dev, libglade2-dev
 Standards-Version: 3.7.3
 Vcs-Svn: svn://svn.berlios.de/fullstory/vdr-gui/trunk
 Vcs-Browser: http://svn.berlios.de/wsvn/fullstory/vdr-gui/trunk/
