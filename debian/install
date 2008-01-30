@@ -1,3 +1,2 @@
-pixmaps/sidux-vdr.png usr/share/pixmaps
-pixmaps/vdr-gui.png usr/share/pixmaps
-
+pixmaps/sidux-vdr.png usr/share/vdr-gui/pixmaps
+pixmaps/vdr-gui.png usr/share/vdr-gui/pixmaps
