@@ -1,12 +1,8 @@
-vdr-gui (0.2.5) UNRELEASED; urgency=low
-
-  * NOT RELEASED YET
-
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 21 Feb 2008 01:39:51 +0100
-
 vdr-gui (0.2.4) unstable; urgency=low
 
   * appease lintian and write (C) as © in debian/copyright.
+  * remove obsolete debian/dirs, which also removes the empty
+    /usr/share/pixmaps.
 
  -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 21 Feb 2008 01:38:03 +0100
 
