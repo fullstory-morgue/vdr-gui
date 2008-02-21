@@ -1,8 +1,8 @@
-vdr-gui (0.2.4) UNRELEASED; urgency=low
+vdr-gui (0.2.4) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * appease lintian and write (C) as © in debian/copyright.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 30 Jan 2008 22:40:21 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 21 Feb 2008 01:38:03 +0100
 
 vdr-gui (0.2.3) unstable; urgency=low
 

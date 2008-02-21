@@ -3,7 +3,9 @@ Tue, 12 Dec 2006 21:27:11 +0100.
 
 Upstream Author: Horst Tritremmel <peter_weber69@gmx.at>
 
-Copyright: Horst Tritremmel <peter_weber69@gmx.at>
+Copyright Holder:
+
+   Copyright © 2006-2008 Horst Tritremmel <peter_weber69@gmx.at>
 
 License: GPL2
 
@@ -26,6 +28,6 @@ These files are distributed as is, and without modification.
 On Debian systems, the complete text of the GNU General
 Public License can be found in `/usr/share/common-licenses/GPL-2'.
 
-The Debian packaging is (C) 2006, Horst Tritremmel <peter_weber69@gmx.at> and
+The Debian packaging is © 2006, Horst Tritremmel <peter_weber69@gmx.at> and
 is licensed under the GPL, see `/usr/share/common-licenses/GPL'.
 
