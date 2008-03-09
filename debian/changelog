@@ -1,9 +1,5 @@
-vdr-gui (0.2.5) UNRELEASED; urgency=low
+vdr-gui (0.2.5) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Joaquim Boura ]
   * added the pt language file. Thanks to Rui Umbelino (VaMPiRiC_CRoW)
 
  -- Joaquim Boura <x-un-i@sidux.com>  Sun, 09 Mar 2008 17:43:22 +0100
