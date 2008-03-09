@@ -1,0 +1,345 @@
+# translation of pt.po to
+# Horst Tritremmel <peter_weber69@gmx.at>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: pt\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-12-28 16:19+0100\n"
+"PO-Revision-Date: 2008-03-09 15:06+0000\n"
+"Last-Translator: Rui Umbelino (VaMPiRiC_CRoW)\n"
+"Language-Team:  <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../src/interface.c:137
+msgid "VDR-GUI"
+msgstr ""
+
+#: ../src/interface.c:174
+msgid "start VDR"
+msgstr "iniciar o VDR"
+
+#: ../src/interface.c:188
+msgid "VDR-Start"
+msgstr "VDR-Iniciar"
+
+#: ../src/interface.c:197
+msgid "stop VDR"
+msgstr "parar o VDR"
+
+#: ../src/interface.c:211
+msgid "VDR-Stop"
+msgstr "VDR-Parar"
+
+#: ../src/interface.c:215
+msgid "wpvrscan"
+msgstr "wpvrscan"
+
+#: ../src/interface.c:220
+msgid "VDR-Channelscan Analog-Tuner Typ PVR"
+msgstr "Tipo PVR de Sintonização Analógica para Verificação de Canais VDR"
+
+#: ../src/interface.c:222
+msgid "Videodir"
+msgstr "Pasta de Video"
+
+#: ../src/interface.c:227
+msgid "Change your Video Directory (default: /var/lib/video.00)"
+msgstr "Alterar a pasta de Video (por omissão: /var/lib/video.00)"
+
+#: ../src/interface.c:229
+msgid "Language auto"
+msgstr "Língua automática"
+
+#: ../src/interface.c:233
+msgid "Set VDR-language automatically"
+msgstr "Definir automaticamente a língua do VDR"
+
+#: ../src/interface.c:235
+msgid "Language manuel"
+msgstr "Manual de Línguas"
+
+#: ../src/interface.c:239
+msgid "Manually define VDR-language in VDR-OSD-Menu"
+msgstr "Definir manualmente a língua do VDR no Menu VDR-OSD"
+
+#: ../src/interface.c:241
+msgid "VDR Autostart"
+msgstr "VDR Auto-iniciar"
+
+#: ../src/interface.c:246
+msgid "run vdr at systemstart"
+msgstr "executar o VDR no inicio do sistema"
+
+#: ../src/interface.c:248
+msgid "Disable Autostart"
+msgstr "Desactivar Auto-iniciar"
+
+#: ../src/interface.c:253
+msgid "disable vdr systemstart"
+msgstr "desactivar o VDR no inicio do sistema"
+
+#: ../src/interface.c:260
+msgid ""
+"Change VDR Channelslist. If you don't find your's, then use channelscan from "
+"OSD in your TV Picture, or search the Internet for w_scan. Save the channels."
+"conf to /var/lib/vdr/channels.conf. SET USER AND GROUP  TO vdr (chown vdr:"
+"vdr channels.conf)"
+msgstr ""
+"Alterar a lista de canais do VDR. Se não encontrar os seus canais, então use a verificação de canais do OSD da Imagem-TV, ou procure na Internet por w_scan. Guarde o channels."
+"conf para o /var/lib/vdr/channels.conf. DEFINA o UTILIZADOR E GRUPO PARA vdr (chown vdr:"
+"vdr channels.conf)"
+
+#: ../src/interface.c:274
+msgid "Channellist"
+msgstr "Lista de Canais"
+
+#: ../src/interface.c:278
+msgid "<b>VDR</b>"
+msgstr "<b>VDR</b>"
+
+#: ../src/interface.c:299
+msgid "TV Fullscreen off"
+msgstr "TV Ecrã Inteiro desligado"
+
+#: ../src/interface.c:303
+msgid "Start TV-Picture in normal mode"
+msgstr "Iniciar a Imagem-TV em modo Normal"
+
+#: ../src/interface.c:309
+msgid "Web-Frontend (vdradmin)"
+msgstr "Página Web de Frente (vdradmin)"
+
+#: ../src/interface.c:323
+msgid "Web-Frontend"
+msgstr "Página Web de Frente"
+
+#: ../src/interface.c:327
+msgid "User Manual"
+msgstr "Manual de Utilizador"
+
+#: ../src/interface.c:331
+msgid "VDR User Manual"
+msgstr "VDR Manual de Utilizador"
+
+#: ../src/interface.c:333
+msgid "TV Fullscreen"
+msgstr "TV Ecrã Inteiro"
+
+#: ../src/interface.c:337
+msgid "Start TV-Picture in Fullscreen mode"
+msgstr "Iniciar a Imagem-TV em modo Ecrã Inteiro"
+
+#: ../src/interface.c:339
+msgid "<b>Others</b>"
+msgstr "<b>Outros</b>"
+
+#: ../src/interface.c:349
+msgid "http://sidux.com"
+msgstr ""
+
+#: ../src/interface.c:360
+msgid "http://www.linuxtv.org/vdrwiki"
+msgstr ""
+
+#: ../src/interface.c:372
+msgid "Update your VDR"
+msgstr "Actualizar o VDR"
+
+#: ../src/interface.c:386
+msgid "Update"
+msgstr "Actualizar"
+
+#: ../src/interface.c:405
+msgid "get keymap"
+msgstr "adquirir o mapa de teclas"
+
+#: ../src/interface.c:410
+msgid "Get xine Keyboardlayout for VDR (see ~/.xine/keymap"
+msgstr "Adquirir o formato de teclado do xine para o VDR (see ~/.xine/keymap)"
+
+#: ../src/interface.c:412
+msgid "xine-ui Autostart"
+msgstr "xine-ui Auto-iniciar"
+
+#: ../src/interface.c:417
+msgid "run xine-ui at systemstart (only for KDE)"
+msgstr "executar o xine-ui no inicio do sistema (só para o KDE)"
+
+#: ../src/interface.c:424
+msgid "TV-Picture with xine-ui (NOT SUPPORTED)"
+msgstr "Imagem-TV com o xine-ui (NÂO SUPORTADO)"
+
+#: ../src/interface.c:438
+msgid "xine-ui (Picture)"
+msgstr "xine-ui (Imagem)"
+
+#: ../src/interface.c:442 ../src/interface.c:470
+msgid "disable Autostart"
+msgstr "desactivar Auto-iniciar"
+
+#: ../src/interface.c:447
+msgid "disable xine-ui at systemstart"
+msgstr "desactivar o xine-ui no inicio do sistema"
+
+#: ../src/interface.c:449
+msgid "<b>TV</b> not supported"
+msgstr "<b>TV</b> não suportada"
+
+#: ../src/interface.c:475
+msgid "disable vdr-sxfe at systemstart"
+msgstr "desactivar o vdr-sxfe no inicio do sistema"
+
+#: ../src/interface.c:477
+msgid "vdr-sxfe Autostart"
+msgstr "vdr-sxfe Auto-iniciar"
+
+#: ../src/interface.c:482
+msgid "run vdr-sxfe at systemstart (only for KDE)"
+msgstr "executar o vdr-sxfe no inicio do sistema (só para o KDE)"
+
+#: ../src/interface.c:489
+msgid "TV-Picture with xineliboutput Frontend"
+msgstr "Imagem-TV com o xineliboutput à frente"
+
+#: ../src/interface.c:509
+msgid "vdr-sxfe (Picture)"
+msgstr "vdr-sxfe (Imagem)"
+
+#: ../src/interface.c:513
+msgid "<b>TV</b>"
+msgstr ""
+
+#: ../src/interface.c:519
+msgid ""
+"by\n"
+"Horst  J. Tritremmel (hjt)"
+msgstr ""
+"por\n"
+"Horst  J. Tritremmel (hjt)"
+
+#: ../src/interface.c:551 ../src/interface.c:646
+msgid "Exit"
+msgstr "Sair"
+
+#: ../src/interface.c:570
+msgid "Allow client access"
+msgstr "Permitir acesso a clientes"
+
+#: ../src/interface.c:574
+msgid "Allow client connect (insert IP from client). Do this on Server"
+msgstr ""
+"Erlauben Sie den Zugriff von Clients. Tragen Sie die IP des Clients ein. "
+"Einzustellen am VDR Server"
+
+#: ../src/interface.c:576
+msgid "UDP network transport"
+msgstr "Transporte de Rede UDP"
+
+#: ../src/interface.c:580
+msgid "UDP network transport. Use this on server or client"
+msgstr "Transporte de Rede UDP. Use-o no servidor ou cliente (por omissão)"
+
+#: ../src/interface.c:582
+msgid "TCP network transport"
+msgstr "Transporte de Rede TCP"
+
+#: ../src/interface.c:586
+msgid "TCP network transport. Use this on server or client (default)"
+msgstr "Transporte de Rede TCP. Use-o no servidor ou cliente (por omissão)"
+
+#: ../src/interface.c:592
+msgid ""
+"Network IP-Adress from VDR Server, with xineliboutput is only one client "
+"possible. For more clients you must use streamdev-plugin. Do this on Client"
+msgstr "O endereço IP de Rede do Servidor VDR, com o xineliboutput só pode ter um cliente. Para mais clientes tem de usar o plugin streamdev. Faça-o no Cliente."
+
+#: ../src/interface.c:593
+msgid "localhost"
+msgstr "Máquina local"
+
+#: ../src/interface.c:595
+msgid "IP:"
+msgstr ""
+
+#: ../src/interface.c:600
+msgid "<b>Streaming</b>"
+msgstr ""
+
+#: ../src/interface.c:606
+msgid "Action"
+msgstr "Acção"
+
+#: ../src/interface.c:618
+msgid ""
+"Up\t\t\tUp\n"
+"Down\t\tDown\n"
+"Menu\t\tm\n"
+"Ok\t\t\tReturn\n"
+"Back\t\tBackSpace\n"
+"Left\t\t\tLeft\n"
+"Right\t\tRight\n"
+"Red\t\t\tF1\n"
+"Green\t\tF2\n"
+"Yellow\t\tF3\n"
+"Blue\t\tF4\n"
+"0\t\t\t0\n"
+"1\t\t\t1\n"
+"2\t\t\t2\n"
+"3\t\t\t3\n"
+"4\t\t\t4\n"
+"5\t\t\t5\n"
+"6\t\t\t6\n"
+"7\t\t\t7\n"
+"8\t\t\t8\n"
+"9\t\t\t9\n"
+"Info\t\t\ti\n"
+"Pause\t\tspace\n"
+"FastFwd\t\tF6\n"
+"FastRew\t\tF5\n"
+"Power\t\tp\n"
+"Volume+\tF12\n"
+"Volume-\t\tF11\n"
+"Mute    \t\tF10"
+msgstr ""
+"Cima\t\t\tUp\n"
+"Baixo\t\tDown\n"
+"Menu\t\tm\n"
+"Ok\t\t\tReturn\n"
+"Voltar\t\tBackSpace\n"
+"Esquerda\t\t\tLeft\n"
+"Direita\t\tRight\n"
+"Vermelho\t\t\tF1\n"
+"Verde\t\tF2\n"
+"Amarelo\t\tF3\n"
+"Azul\t\tF4\n"
+"0\t\t\t0\n"
+"1\t\t\t1\n"
+"2\t\t\t2\n"
+"3\t\t\t3\n"
+"4\t\t\t4\n"
+"5\t\t\t5\n"
+"6\t\t\t6\n"
+"7\t\t\t7\n"
+"8\t\t\t8\n"
+"9\t\t\t9\n"
+"Informação\t\t\ti\n"
+"Pausa\t\tspace\n"
+"Encaminhar Rápido\t\tF6\n"
+"Voltar Rápido\t\tF5\n"
+"Ligar\t\tp\n"
+"Volume +\tF12\n"
+"Volume -\t\tF11\n"
+"Sem Som\t\tF10"
+
+#: ../src/interface.c:650
+msgid "Keyboardlayout"
+msgstr "Formato do teclado"
+
+#: ../src/support.c:90 ../src/support.c:114
+#, c-format
+msgid "Couldn't find pixmap file: %s"
+msgstr "Não encontrou o ficheiro pixmap: %s"
+
