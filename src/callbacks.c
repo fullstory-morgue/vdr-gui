@@ -60,7 +60,7 @@ void
 on_vdr_sxfe_autostart_clicked          (GtkButton       *button,
                                         gpointer         user_data)
 {
-     system("echo -e '#!/bin/sh\n/usr/sbin/vdr-xine sxfe' > $HOME/.kde/Autostart/vdr-xine-start;chmod +x $HOME/.kde/Autostart/vdr-xine-start");
+     system("printf '#!/bin/sh\n/usr/sbin/vdr-xine sxfe' > $HOME/.kde/Autostart/vdr-xine-start;chmod +x $HOME/.kde/Autostart/vdr-xine-start\n");
 }
 
 
@@ -96,7 +96,7 @@ void
 on_xine_ui_autostart_clicked           (GtkButton       *button,
                                         gpointer         user_data)
 {
-     system("echo -e '#!/bin/sh\n/usr/sbin/vdr-xine xine' > $HOME/.kde/Autostart/vdr-xine-start;chmod +x $HOME/.kde/Autostart/vdr-xine-start");
+     system("printf '#!/bin/sh\n/usr/sbin/vdr-xine xine' > $HOME/.kde/Autostart/vdr-xine-start;chmod +x $HOME/.kde/Autostart/vdr-xine-start\n");
 }
 
 

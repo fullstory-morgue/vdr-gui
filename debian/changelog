@@ -1,8 +1,8 @@
-vdr-gui (0.2.6) UNRELEASED; urgency=low
+vdr-gui (0.2.6) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * fix bashisms.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 09 Mar 2008 21:41:01 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 14 Mar 2008 01:34:14 +0100
 
 vdr-gui (0.2.5) unstable; urgency=low
 
