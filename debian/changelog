@@ -1,8 +1,12 @@
 vdr-gui (0.2.7) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 14 Mar 2008 01:36:05 +0100
+  [ Horst Tritremmel ]
+  * changed from vdradmin to vdr-plugin-live webfrontend
+
+ -- Horst Tritremmel <hjt@sidux.com>  Wed, 26 Mar 2008 21:14:50 +0100
 
 vdr-gui (0.2.6) unstable; urgency=low
 

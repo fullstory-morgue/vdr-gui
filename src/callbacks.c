@@ -203,9 +203,7 @@ on_vdr_autostart_clicked               (GtkButton       *button,
    char call[MAXLINE], root_or_not[MAXLINE];
 
    strncpy( call, "update-rc.d -f vdr remove;", MAXLINE);
-   strncat( call, "update-rc.d -f vdradmin-am remove;", MAXLINE);
    strncat( call, "update-rc.d -f vdr defaults 99;", MAXLINE);
-   strncat( call, "update-rc.d -f vdradmin-am defaults 99", MAXLINE);
 
    // root check
    if (!getenv("USER") || strncmp( getenv("USER"), "root", 4 ) == 0 )
@@ -227,7 +225,6 @@ on_vdr_disable_autostart_clicked       (GtkButton       *button,
    char call[MAXLINE], root_or_not[MAXLINE];
 
    strncpy( call, "update-rc.d -f vdr remove;", MAXLINE);
-   strncat( call, "update-rc.d -f vdradmin-am remove", MAXLINE);
 
    // root check
    if (!getenv("USER") || strncmp( getenv("USER"), "root", 4 ) == 0 )
@@ -296,7 +293,7 @@ void
 on_vdradmin_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-   system("/usr/sbin/vdr-vdradmin &");
+   system("/usr/sbin/vdr-live &");
 }
 
 
@@ -304,7 +301,7 @@ void
 on_user_manual_clicked                 (GtkButton       *button,
                                         gpointer         user_data)
 {
-      system("if [ $(echo $LANGUAGE|cut -c1-2) = de ]; then \
+      system("if [ $(echo $LANG|cut -c1-2) = de ]; then \
                     x-www-browser 'http://www.vdr-wiki.de/wiki/index.php/Benutzerhandbuch' & \
               else \
                     x-www-browser 'http://www.linuxtv.org/vdrwiki/index.php/VDR_User%27s_Manual' & \
