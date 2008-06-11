@@ -156,7 +156,6 @@ void
 on_IPEntry_activate                    (GtkEntry        *entry,
                                         gpointer         user_data);
 
-gboolean
-on_window1_configure_event             (GtkWidget       *widget,
-                                        GdkEventConfigure *event,
+void
+on_window1_realize                     (GtkWidget       *widget,
                                         gpointer         user_data);

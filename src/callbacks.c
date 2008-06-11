@@ -14,12 +14,11 @@
 #define MAXLINE 1024
 
 FILE* fp;
-char IP[80], IPfile[80];
+char IP[MAXLINE], IPfile[MAXLINE];
 
 
 void vdrip_file(char *rw)
 {
-
   if (!getenv("HOME")) {
      fprintf(stderr, "cd: HOME isn't defined\n");
      }
@@ -29,14 +28,16 @@ void vdrip_file(char *rw)
   else {
      fp=fopen("vdrip.conf", rw);  // rw for read or write the file
      if( fp == NULL ) {
-         strcpy(IPfile, "localhost");
+         strncpy(IPfile, "localhost;auto", MAXLINE);  // IP;videodriver
      }
      else {
        fseek( fp, 0L, SEEK_SET );
        fscanf( fp, "%s", IPfile);
-
-       if( IP != IPfile && rw == "w" )
+       printf("IP: %s, IPfile: %s\n", IP, IPfile);
+       if( IP != IPfile && strncmp(rw, "w", 1) ) {
+          printf("config: %s\n", IP);
           fputs(IP, fp);
+       }
 
        fclose(fp);
      }
@@ -47,9 +48,15 @@ void
 on_vdr_sxfe_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
- 
-    GtkWidget *entry = lookup_widget(GTK_WIDGET(button), "IPEntry");
+
+    GtkWidget *entry           = lookup_widget(GTK_WIDGET(button), "IPEntry");
+    gchar *video_driver        = gtk_combo_box_get_active_text(GTK_COMBO_BOX (
+                                   lookup_widget (GTK_WIDGET (button), "combobox_driver")));
+
     strcpy(IP, gtk_entry_get_text(GTK_ENTRY(entry)));
+    strncat(IP, ":", MAXLINE);
+    strncat(IP, video_driver, MAXLINE);
+
     vdrip_file("w");  // w for write the file
 
     system("/usr/sbin/vdr-xine sxfe &");
@@ -69,18 +76,6 @@ on_vdr_sxfe_disable_autostart_clicked  (GtkButton       *button,
                                         gpointer         user_data)
 {
      system("[ -e $HOME/.kde/Autostart/vdr-xine-start ] && rm -f $HOME/.kde/Autostart/vdr-xine-start");
-}
-
-
-void
-on_xine_ui_clicked                     (GtkButton       *button,
-                                        gpointer         user_data)
-{
-    GtkWidget *entry = lookup_widget(GTK_WIDGET(button), "IPEntry");
-    strcpy(IP, gtk_entry_get_text(GTK_ENTRY(entry)));
-    vdrip_file("w");  // w for write the file
-
-    system("/usr/sbin/vdr-xine xine &");
 }
 
 
@@ -368,23 +363,63 @@ on_vdr_eventbox2_button_press_event    (GtkWidget       *widget,
 
 
 void
-on_IPEntry_activate                    (GtkEntry        *entry,
-                                        gpointer         user_data)
-{
+gtk_combo_box_set_active_text (GtkComboBox *p_combo_box, 
+                                const gchar *text) {
+  gint i;
+  gint nb_entry = 0;
+  GtkTreeModel *p_tree_model = NULL;
 
+  g_return_if_fail (p_combo_box);
+  g_return_if_fail (text);
+
+  p_tree_model = gtk_combo_box_get_model (p_combo_box);
+  nb_entry = gtk_tree_model_iter_n_children (p_tree_model, NULL);
+  for (i = 0; i < nb_entry; i++)
+  {
+    gtk_combo_box_set_active (p_combo_box, i);
+    if (strcmp (gtk_combo_box_get_active_text (p_combo_box), text) == 0)
+    {
+      break;
+    }
+  }
+  if (i == nb_entry)
+  {
+    gtk_combo_box_set_active (p_combo_box, 0);
+  }
 }
 
 
-gboolean
-on_window1_configure_event             (GtkWidget       *widget,
-                                        GdkEventConfigure *event,
+void
+on_window1_realize                     (GtkWidget       *widget,
                                         gpointer         user_data)
 {
 
+  const char *entry1 = "", *entry2 = "";
   GtkWidget *entry = lookup_widget(GTK_WIDGET(widget), "IPEntry");
 
   vdrip_file("r");   // r for read the file
-  gtk_entry_set_text (GTK_ENTRY (entry), IPfile);
 
-  return FALSE;
+  // split IP and video driver
+
+  entry1 = strtok(IPfile, ":");
+  entry2 = strtok(NULL, ":");
+
+
+
+  if ( entry1 == NULL || entry2 == NULL ) {
+      if ( strlen( IPfile ) < 1 ) {
+          strncpy( IPfile, "localhost", 9);
+      }
+      gtk_entry_set_text (GTK_ENTRY (entry), IPfile);
+      gtk_combo_box_set_active(GTK_COMBO_BOX (
+                      lookup_widget (GTK_WIDGET (widget), "combobox_driver")) ,0);
+  }
+  else {
+      gtk_entry_set_text (GTK_ENTRY (entry), entry1);
+      gtk_combo_box_set_active_text(GTK_COMBO_BOX (
+                      lookup_widget (GTK_WIDGET (widget), "combobox_driver")), entry2);
+  }
+
+  return;
 }
+

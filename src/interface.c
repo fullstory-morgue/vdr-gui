@@ -45,13 +45,15 @@ create_window1 (void)
   GtkWidget *frame1;
   GtkWidget *alignment1;
   GtkWidget *fixed4;
-  GtkWidget *vdr_sxfe_autostart;
   GtkWidget *vdr_sxfe;
   GtkWidget *alignment13;
   GtkWidget *hbox9;
   GtkWidget *image10;
   GtkWidget *label30;
+  GtkWidget *combobox_driver;
+  GtkWidget *vdr_sxfe_autostart;
   GtkWidget *vdr_sxfe_disable_autostart;
+  GtkWidget *label40;
   GtkWidget *label8;
   GtkWidget *frame4;
   GtkWidget *alignment5;
@@ -200,17 +202,10 @@ create_window1 (void)
   gtk_widget_show (fixed4);
   gtk_container_add (GTK_CONTAINER (alignment1), fixed4);
 
-  vdr_sxfe_autostart = gtk_button_new_with_mnemonic (_("vdr-sxfe Autostart"));
-  gtk_widget_show (vdr_sxfe_autostart);
-  gtk_fixed_put (GTK_FIXED (fixed4), vdr_sxfe_autostart, 0, 56);
-  gtk_widget_set_size_request (vdr_sxfe_autostart, 160, 30);
-  gtk_container_set_border_width (GTK_CONTAINER (vdr_sxfe_autostart), 1);
-  gtk_tooltips_set_tip (tooltips, vdr_sxfe_autostart, _("run vdr-sxfe at systemstart (only for KDE)"), NULL);
-
   vdr_sxfe = gtk_button_new ();
   gtk_widget_show (vdr_sxfe);
-  gtk_fixed_put (GTK_FIXED (fixed4), vdr_sxfe, 0, 8);
-  gtk_widget_set_size_request (vdr_sxfe, 160, 32);
+  gtk_fixed_put (GTK_FIXED (fixed4), vdr_sxfe, 0, 0);
+  gtk_widget_set_size_request (vdr_sxfe, 168, 32);
   gtk_container_set_border_width (GTK_CONTAINER (vdr_sxfe), 1);
   gtk_tooltips_set_tip (tooltips, vdr_sxfe, _("TV-Picture with xineliboutput Frontend"), NULL);
   gtk_widget_add_accelerator (vdr_sxfe, "clicked", accel_group,
@@ -236,12 +231,46 @@ create_window1 (void)
   gtk_widget_show (label30);
   gtk_box_pack_start (GTK_BOX (hbox9), label30, FALSE, FALSE, 0);
 
+  combobox_driver = gtk_combo_box_new_text ();
+  gtk_widget_show (combobox_driver);
+  gtk_fixed_put (GTK_FIXED (fixed4), combobox_driver, 72, 109);
+  gtk_widget_set_size_request (combobox_driver, 96, 30);
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_driver), _("auto"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_driver), _("none"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_driver), _("xv"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_driver), _("xshm"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_driver), _("xvmc"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_driver), _("xxmc"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_driver), _("XDirectFB"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_driver), _("DirectFB"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_driver), _("SyncFB"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_driver), _("opengl"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_driver), _("caca"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_driver), _("aa"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_driver), _("sdl"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_driver), _("fb"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_driver), _("dxr3"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combobox_driver), _("aadxr3"));
+
+  vdr_sxfe_autostart = gtk_button_new_with_mnemonic (_("vdr-sxfe Autostart"));
+  gtk_widget_show (vdr_sxfe_autostart);
+  gtk_fixed_put (GTK_FIXED (fixed4), vdr_sxfe_autostart, 0, 40);
+  gtk_widget_set_size_request (vdr_sxfe_autostart, 168, 30);
+  gtk_container_set_border_width (GTK_CONTAINER (vdr_sxfe_autostart), 1);
+  gtk_tooltips_set_tip (tooltips, vdr_sxfe_autostart, _("run vdr-sxfe at systemstart (only for KDE)"), NULL);
+
   vdr_sxfe_disable_autostart = gtk_button_new_with_mnemonic (_("disable Autostart"));
   gtk_widget_show (vdr_sxfe_disable_autostart);
-  gtk_fixed_put (GTK_FIXED (fixed4), vdr_sxfe_disable_autostart, 0, 92);
-  gtk_widget_set_size_request (vdr_sxfe_disable_autostart, 160, 30);
+  gtk_fixed_put (GTK_FIXED (fixed4), vdr_sxfe_disable_autostart, 0, 74);
+  gtk_widget_set_size_request (vdr_sxfe_disable_autostart, 168, 30);
   gtk_container_set_border_width (GTK_CONTAINER (vdr_sxfe_disable_autostart), 1);
   gtk_tooltips_set_tip (tooltips, vdr_sxfe_disable_autostart, _("disable vdr-sxfe at systemstart"), NULL);
+
+  label40 = gtk_label_new (_("driver:"));
+  gtk_widget_show (label40);
+  gtk_fixed_put (GTK_FIXED (fixed4), label40, 0, 112);
+  gtk_widget_set_size_request (label40, 72, 24);
+  gtk_misc_set_alignment (GTK_MISC (label40), 0, 0.5);
 
   label8 = gtk_label_new (_("<b>TV</b>"));
   gtk_widget_show (label8);
@@ -584,8 +613,8 @@ create_window1 (void)
   g_signal_connect ((gpointer) window1, "delete_event",
                     G_CALLBACK (gtk_main_quit),
                     NULL);
-  g_signal_connect ((gpointer) window1, "configure_event",
-                    G_CALLBACK (on_window1_configure_event),
+  g_signal_connect ((gpointer) window1, "realize",
+                    G_CALLBACK (on_window1_realize),
                     NULL);
   g_signal_connect ((gpointer) sidux_eventbox1, "button_press_event",
                     G_CALLBACK (on_sidux_eventbox1_button_press_event),
@@ -596,20 +625,17 @@ create_window1 (void)
   g_signal_connect ((gpointer) update, "clicked",
                     G_CALLBACK (on_update_clicked),
                     NULL);
-  g_signal_connect ((gpointer) vdr_sxfe_autostart, "clicked",
-                    G_CALLBACK (on_vdr_sxfe_autostart_clicked),
-                    NULL);
   g_signal_connect ((gpointer) vdr_sxfe, "clicked",
                     G_CALLBACK (on_vdr_sxfe_clicked),
                     NULL);
   g_signal_connect ((gpointer) vdr_sxfe, "clicked",
                     G_CALLBACK (gtk_main_quit),
                     NULL);
+  g_signal_connect ((gpointer) vdr_sxfe_autostart, "clicked",
+                    G_CALLBACK (on_vdr_sxfe_autostart_clicked),
+                    NULL);
   g_signal_connect ((gpointer) vdr_sxfe_disable_autostart, "clicked",
                     G_CALLBACK (on_vdr_sxfe_disable_autostart_clicked),
-                    NULL);
-  g_signal_connect ((gpointer) IPEntry, "activate",
-                    G_CALLBACK (on_IPEntry_activate),
                     NULL);
   g_signal_connect ((gpointer) allowclient, "clicked",
                     G_CALLBACK (on_allowclient_clicked),
@@ -682,13 +708,15 @@ create_window1 (void)
   GLADE_HOOKUP_OBJECT (window1, frame1, "frame1");
   GLADE_HOOKUP_OBJECT (window1, alignment1, "alignment1");
   GLADE_HOOKUP_OBJECT (window1, fixed4, "fixed4");
-  GLADE_HOOKUP_OBJECT (window1, vdr_sxfe_autostart, "vdr_sxfe_autostart");
   GLADE_HOOKUP_OBJECT (window1, vdr_sxfe, "vdr_sxfe");
   GLADE_HOOKUP_OBJECT (window1, alignment13, "alignment13");
   GLADE_HOOKUP_OBJECT (window1, hbox9, "hbox9");
   GLADE_HOOKUP_OBJECT (window1, image10, "image10");
   GLADE_HOOKUP_OBJECT (window1, label30, "label30");
+  GLADE_HOOKUP_OBJECT (window1, combobox_driver, "combobox_driver");
+  GLADE_HOOKUP_OBJECT (window1, vdr_sxfe_autostart, "vdr_sxfe_autostart");
   GLADE_HOOKUP_OBJECT (window1, vdr_sxfe_disable_autostart, "vdr_sxfe_disable_autostart");
+  GLADE_HOOKUP_OBJECT (window1, label40, "label40");
   GLADE_HOOKUP_OBJECT (window1, label8, "label8");
   GLADE_HOOKUP_OBJECT (window1, frame4, "frame4");
   GLADE_HOOKUP_OBJECT (window1, alignment5, "alignment5");

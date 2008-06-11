@@ -20,7 +20,7 @@
   <property name="focus_on_map">True</property>
   <property name="urgency_hint">False</property>
   <signal name="delete_event" handler="gtk_main_quit" last_modification_time="Tue, 05 Dec 2006 21:10:47 GMT"/>
-  <signal name="configure_event" handler="on_window1_configure_event" last_modification_time="Thu, 14 Dec 2006 15:21:11 GMT"/>
+  <signal name="realize" handler="on_window1_realize" last_modification_time="Wed, 11 Jun 2008 14:35:01 GMT"/>
 
   <child>
     <widget class="GtkNotebook" id="notebook1">
@@ -203,29 +203,9 @@
 		      <property name="visible">True</property>
 
 		      <child>
-			<widget class="GtkButton" id="vdr-sxfe-autostart">
-			  <property name="border_width">1</property>
-			  <property name="width_request">160</property>
-			  <property name="height_request">30</property>
-			  <property name="visible">True</property>
-			  <property name="tooltip" translatable="yes">run vdr-sxfe at systemstart (only for KDE)</property>
-			  <property name="can_focus">True</property>
-			  <property name="label" translatable="yes">vdr-sxfe Autostart</property>
-			  <property name="use_underline">True</property>
-			  <property name="relief">GTK_RELIEF_NORMAL</property>
-			  <property name="focus_on_click">True</property>
-			  <signal name="clicked" handler="on_vdr_sxfe_autostart_clicked" last_modification_time="Thu, 07 Dec 2006 19:15:48 GMT"/>
-			</widget>
-			<packing>
-			  <property name="x">0</property>
-			  <property name="y">56</property>
-			</packing>
-		      </child>
-
-		      <child>
 			<widget class="GtkButton" id="vdr-sxfe">
 			  <property name="border_width">1</property>
-			  <property name="width_request">160</property>
+			  <property name="width_request">168</property>
 			  <property name="height_request">32</property>
 			  <property name="visible">True</property>
 			  <property name="tooltip" translatable="yes">TV-Picture with xineliboutput Frontend</property>
@@ -304,14 +284,64 @@
 			</widget>
 			<packing>
 			  <property name="x">0</property>
-			  <property name="y">8</property>
+			  <property name="y">0</property>
+			</packing>
+		      </child>
+
+		      <child>
+			<widget class="GtkComboBox" id="combobox_driver">
+			  <property name="width_request">96</property>
+			  <property name="height_request">30</property>
+			  <property name="visible">True</property>
+			  <property name="items" translatable="yes">auto
+none
+xv
+xshm
+xvmc
+xxmc
+XDirectFB
+DirectFB
+SyncFB
+opengl
+caca
+aa
+sdl
+fb
+dxr3
+aadxr3</property>
+			  <property name="add_tearoffs">False</property>
+			  <property name="focus_on_click">True</property>
+			</widget>
+			<packing>
+			  <property name="x">72</property>
+			  <property name="y">109</property>
+			</packing>
+		      </child>
+
+		      <child>
+			<widget class="GtkButton" id="vdr-sxfe-autostart">
+			  <property name="border_width">1</property>
+			  <property name="width_request">168</property>
+			  <property name="height_request">30</property>
+			  <property name="visible">True</property>
+			  <property name="tooltip" translatable="yes">run vdr-sxfe at systemstart (only for KDE)</property>
+			  <property name="can_focus">True</property>
+			  <property name="label" translatable="yes">vdr-sxfe Autostart</property>
+			  <property name="use_underline">True</property>
+			  <property name="relief">GTK_RELIEF_NORMAL</property>
+			  <property name="focus_on_click">True</property>
+			  <signal name="clicked" handler="on_vdr_sxfe_autostart_clicked" last_modification_time="Thu, 07 Dec 2006 19:15:48 GMT"/>
+			</widget>
+			<packing>
+			  <property name="x">0</property>
+			  <property name="y">40</property>
 			</packing>
 		      </child>
 
 		      <child>
 			<widget class="GtkButton" id="vdr-sxfe-disable-autostart">
 			  <property name="border_width">1</property>
-			  <property name="width_request">160</property>
+			  <property name="width_request">168</property>
 			  <property name="height_request">30</property>
 			  <property name="visible">True</property>
 			  <property name="tooltip" translatable="yes">disable vdr-sxfe at systemstart</property>
@@ -324,7 +354,33 @@
 			</widget>
 			<packing>
 			  <property name="x">0</property>
-			  <property name="y">92</property>
+			  <property name="y">74</property>
+			</packing>
+		      </child>
+
+		      <child>
+			<widget class="GtkLabel" id="label40">
+			  <property name="width_request">72</property>
+			  <property name="height_request">24</property>
+			  <property name="visible">True</property>
+			  <property name="label" translatable="yes">driver:</property>
+			  <property name="use_underline">False</property>
+			  <property name="use_markup">False</property>
+			  <property name="justify">GTK_JUSTIFY_LEFT</property>
+			  <property name="wrap">False</property>
+			  <property name="selectable">False</property>
+			  <property name="xalign">0</property>
+			  <property name="yalign">0.5</property>
+			  <property name="xpad">0</property>
+			  <property name="ypad">0</property>
+			  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+			  <property name="width_chars">-1</property>
+			  <property name="single_line_mode">False</property>
+			  <property name="angle">0</property>
+			</widget>
+			<packing>
+			  <property name="x">0</property>
+			  <property name="y">112</property>
 			</packing>
 		      </child>
 		    </widget>
@@ -400,7 +456,6 @@
 			  <property name="has_frame">True</property>
 			  <property name="invisible_char">*</property>
 			  <property name="activates_default">False</property>
-			  <signal name="activate" handler="on_IPEntry_activate" last_modification_time="Thu, 14 Dec 2006 14:33:30 GMT"/>
 			</widget>
 			<packing>
 			  <property name="x">24</property>
