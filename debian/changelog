@@ -1,9 +1,5 @@
-vdr-gui (0.2.9) UNRELEASED; urgency=low
+vdr-gui (0.2.9) unstable; urgency=low
 
-  [ Stefan Lippers-Hollmann ]
-  * NOT RELEASED YET
-
-  [ Horst Tritremmel ]
   * ready to release with sidux-vdr >= 1.3.11
 
  -- Horst Tritremmel <hjt@sidux.com>  Thu, 12 Jun 2008 09:47:10 +0200
