@@ -28,13 +28,13 @@ void vdrip_file(char *rw)
   else {
      fp=fopen("vdrip.conf", rw);  // rw for read or write the file
      if( fp == NULL ) {
-         strncpy(IPfile, "localhost;auto", MAXLINE);  // IP;videodriver
+         strncpy(IPfile, "localhost", MAXLINE);  // IP;videodriver
      }
      else {
        fseek( fp, 0L, SEEK_SET );
        fscanf( fp, "%s", IPfile);
        printf("IP: %s, IPfile: %s\n", IP, IPfile);
-       if( IP != IPfile && strncmp(rw, "w", 1) ) {
+       if( strncmp(IP, IPfile, MAXLINE) != 0 && strncmp(rw, "w", 1) == 0 ) {
           printf("config: %s\n", IP);
           fputs(IP, fp);
        }
@@ -53,7 +53,7 @@ on_vdr_sxfe_clicked                    (GtkButton       *button,
     gchar *video_driver        = gtk_combo_box_get_active_text(GTK_COMBO_BOX (
                                    lookup_widget (GTK_WIDGET (button), "combobox_driver")));
 
-    strcpy(IP, gtk_entry_get_text(GTK_ENTRY(entry)));
+    strncpy(IP, gtk_entry_get_text(GTK_ENTRY(entry)), MAXLINE);
     strncat(IP, ":", MAXLINE);
     strncat(IP, video_driver, MAXLINE);
 
@@ -337,7 +337,7 @@ on_sidux_eventbox1_button_press_event  (GtkWidget       *widget,
                                         GdkEventButton  *event,
                                         gpointer         user_data)
 {
-     system("if [ $(echo $LANGUAGE|cut -c1-2) = de ]; then \
+     system("if [ $(echo $LANG|cut -c1-2) = de ]; then \
                     x-www-browser 'http://sidux.com/index.php?&newlang=deu' & \
               else \
                     x-www-browser 'http://sidux.com/index.php?&newlang=eng' & \
@@ -352,7 +352,7 @@ on_vdr_eventbox2_button_press_event    (GtkWidget       *widget,
                                         GdkEventButton  *event,
                                         gpointer         user_data)
 {
-      system("if [ $(echo $LANGUAGE|cut -c1-2) = de ]; then \
+      system("if [ $(echo $LANG|cut -c1-2) = de ]; then \
                     x-www-browser 'http://www.vdr-portal.de' & \
               else \
                     x-www-browser 'http://www.linuxtv.org/vdrwiki/index.php/Main_Page' & \
@@ -394,23 +394,27 @@ on_window1_realize                     (GtkWidget       *widget,
                                         gpointer         user_data)
 {
 
-  const char *entry1 = "", *entry2 = "";
+  gchar *entry1 = "", *entry2 = "";
+  char ip[MAXLINE];
   GtkWidget *entry = lookup_widget(GTK_WIDGET(widget), "IPEntry");
 
   vdrip_file("r");   // r for read the file
 
   // split IP and video driver
 
-  entry1 = strtok(IPfile, ":");
+  strncpy( ip, IPfile, MAXLINE);
+  entry1 = strtok(ip, ":");
   entry2 = strtok(NULL, ":");
 
 
 
   if ( entry1 == NULL || entry2 == NULL ) {
       if ( strlen( IPfile ) < 1 ) {
-          strncpy( IPfile, "localhost", 9);
+          strncpy( ip, "localhost", 9);
       }
-      gtk_entry_set_text (GTK_ENTRY (entry), IPfile);
+
+
+      gtk_entry_set_text (GTK_ENTRY (entry), ip);
       gtk_combo_box_set_active(GTK_COMBO_BOX (
                       lookup_widget (GTK_WIDGET (widget), "combobox_driver")) ,0);
   }
