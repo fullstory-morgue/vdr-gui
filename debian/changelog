@@ -1,8 +1,12 @@
 vdr-gui (0.2.10) UNRELEASED; urgency=low
 
+  [ Stefan Lippers-Hollmann ]
   * NOT RELEASED YET
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 12 Jun 2008 16:58:11 +0200
+  [ Horst Tritremmel ]
+  * Return at end of vdrip.conf added
+
+ -- Horst Tritremmel <hjt@sidux.com>  Mon, 16 Jun 2008 10:30:20 +0200
 
 vdr-gui (0.2.9) unstable; urgency=low
 

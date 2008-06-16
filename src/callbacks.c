@@ -56,6 +56,7 @@ on_vdr_sxfe_clicked                    (GtkButton       *button,
     strncpy(IP, gtk_entry_get_text(GTK_ENTRY(entry)), MAXLINE);
     strncat(IP, ":", MAXLINE);
     strncat(IP, video_driver, MAXLINE);
+    strncat(IP, "\n", MAXLINE);
 
     vdrip_file("w");  // w for write the file
 
