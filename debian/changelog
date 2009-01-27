@@ -1,8 +1,9 @@
-vdr-gui (0.2.11) UNRELEASED; urgency=low
+vdr-gui (0.2.11) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * switch from dh_clean -k to dh_prep, to become compliant with debhelper 7
+    and to make lintian happy.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 17 Jun 2008 11:20:34 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 27 Jan 2009 17:15:18 +0100
 
 vdr-gui (0.2.10) unstable; urgency=low
 
