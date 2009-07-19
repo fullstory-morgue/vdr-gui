@@ -1,8 +1,8 @@
-vdr-gui (0.2.13) UNRELEASED; urgency=low
+vdr-gui (0.2.13) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * remove deprecated dh_desktop call.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 27 Jan 2009 17:19:24 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 19 Jul 2009 16:14:02 +0200
 
 vdr-gui (0.2.12) unstable; urgency=low
 
