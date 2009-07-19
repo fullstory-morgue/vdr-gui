@@ -1,8 +1,9 @@
 vdr-gui (0.2.13) unstable; urgency=low
 
   * remove deprecated dh_desktop call.
+  * bump standards version to 3.8.2, no changes necessary.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 19 Jul 2009 16:14:02 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 19 Jul 2009 16:14:27 +0200
 
 vdr-gui (0.2.12) unstable; urgency=low
 
