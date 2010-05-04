@@ -1,8 +1,11 @@
-vdr-gui (0.2.17) UNRELEASED; urgency=low
+vdr-gui (0.2.17) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * switch to dpkg-source 3.0 (native) format.
+  * switch packaging to compact dh7.
+  * bump standards version to 3.8.4, no changes necessary.
+  * fold debian/control.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 08 Dec 2009 19:16:08 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 05 May 2010 01:52:50 +0200
 
 vdr-gui (0.2.16) unstable; urgency=low
 
