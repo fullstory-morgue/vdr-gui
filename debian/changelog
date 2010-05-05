@@ -1,8 +1,8 @@
-vdr-gui (0.2.18) UNRELEASED; urgency=low
+vdr-gui (0.2.18) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * move to compat level 7.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 05 May 2010 02:04:51 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 05 May 2010 02:35:02 +0200
 
 vdr-gui (0.2.17) unstable; urgency=low
 
