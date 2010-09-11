@@ -199,25 +199,25 @@ vdr-gui (0.0.10) unstable; urgency=low
 
 vdr-gui (0.0.9) unstable; urgency=low
 
-  * remove xine-ui support 
+  * remove xine-ui support
 
  -- Horst Tritremmel <peter_weber69@gmx.at>  Wed, 14 Feb 2007 09:49:16 +0100
 
 vdr-gui (0.0.7) unstable; urgency=low
 
-  * some run as root fixes 
+  * some run as root fixes
 
  -- Horst Tritremmel <peter_weber69@gmx.at>  Sat, 10 Feb 2007 21:48:16 +0100
 
 vdr-gui (0.0.6) unstable; urgency=low
 
-  * if root start vdr_autostart bugfix 
+  * if root start vdr_autostart bugfix
 
  -- Horst Tritremmel <hjt@sidux.com>  Fri,  9 Feb 2007 23:09:29 +0100
 
 vdr-gui (0.0.5) unstable; urgency=low
 
-  * system call bug fix (/usr/sbin not found) 
+  * system call bug fix (/usr/sbin not found)
 
  -- Horst Tritremmel <hjt@sidux.com>  Fri,  9 Feb 2007 22:52:52 +0100
 
@@ -233,7 +233,7 @@ vdr-gui (0.0.3) unstable; urgency=low
 
 vdr-gui (001-2) unstable; urgency=low
 
-  * fix po language file handling in debian/rules 
+  * fix po language file handling in debian/rules
 
  -- Horst Tritremmel <peter_weber69@gmx.at>  Mon,  8 Jan 2007 14:09:17 +0100
 
