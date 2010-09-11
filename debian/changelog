@@ -1,10 +1,10 @@
-vdr-gui (0.2.19) UNRELEASED; urgency=low
+vdr-gui (0.2.19) unstable; urgency=low
 
-  * NOT RELEASED YET
   * bump standards version to 3.9.1, no changes necessary.
   * adapt for the changed file locations in sidux-vdr 1.3.17.
+  * elaborate long description a bit further, to make lintian happy.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 05 Aug 2010 16:22:46 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 05 Aug 2010 16:46:30 +0200
 
 vdr-gui (0.2.18) unstable; urgency=low
 
