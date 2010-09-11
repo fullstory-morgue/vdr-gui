@@ -33,7 +33,7 @@ create_window1 (void)
   GdkPixbuf *window1_icon_pixbuf;
   GtkWidget *notebook1;
   GtkWidget *fixed1;
-  GtkWidget *sidux_eventbox1;
+  GtkWidget *aptosid_eventbox1;
   GtkWidget *image12;
   GtkWidget *vdr_eventbox2;
   GtkWidget *image17;
@@ -142,15 +142,15 @@ create_window1 (void)
   gtk_container_add (GTK_CONTAINER (notebook1), fixed1);
   gtk_container_set_border_width (GTK_CONTAINER (fixed1), 11);
 
-  sidux_eventbox1 = gtk_event_box_new ();
-  gtk_widget_show (sidux_eventbox1);
-  gtk_fixed_put (GTK_FIXED (fixed1), sidux_eventbox1, 32, 0);
-  gtk_widget_set_size_request (sidux_eventbox1, 82, 32);
-  gtk_tooltips_set_tip (tooltips, sidux_eventbox1, _("http://sidux.com"), NULL);
+  aptosid_eventbox1 = gtk_event_box_new ();
+  gtk_widget_show (aptosid_eventbox1);
+  gtk_fixed_put (GTK_FIXED (fixed1), aptosid_eventbox1, 32, 0);
+  gtk_widget_set_size_request (aptosid_eventbox1, 82, 32);
+  gtk_tooltips_set_tip (tooltips, aptosid_eventbox1, _("http://aptosid.com"), NULL);
 
-  image12 = create_pixmap (window1, "sidux-vdr.png");
+  image12 = create_pixmap (window1, "aptosid-vdr.png");
   gtk_widget_show (image12);
-  gtk_container_add (GTK_CONTAINER (sidux_eventbox1), image12);
+  gtk_container_add (GTK_CONTAINER (aptosid_eventbox1), image12);
   gtk_widget_set_size_request (image12, 82, 32);
 
   vdr_eventbox2 = gtk_event_box_new ();
@@ -616,8 +616,8 @@ create_window1 (void)
   g_signal_connect ((gpointer) window1, "realize",
                     G_CALLBACK (on_window1_realize),
                     NULL);
-  g_signal_connect ((gpointer) sidux_eventbox1, "button_press_event",
-                    G_CALLBACK (on_sidux_eventbox1_button_press_event),
+  g_signal_connect ((gpointer) aptosid_eventbox1, "button_press_event",
+                    G_CALLBACK (on_aptosid_eventbox1_button_press_event),
                     NULL);
   g_signal_connect ((gpointer) vdr_eventbox2, "button_press_event",
                     G_CALLBACK (on_vdr_eventbox2_button_press_event),
@@ -696,7 +696,7 @@ create_window1 (void)
   GLADE_HOOKUP_OBJECT_NO_REF (window1, window1, "window1");
   GLADE_HOOKUP_OBJECT (window1, notebook1, "notebook1");
   GLADE_HOOKUP_OBJECT (window1, fixed1, "fixed1");
-  GLADE_HOOKUP_OBJECT (window1, sidux_eventbox1, "sidux_eventbox1");
+  GLADE_HOOKUP_OBJECT (window1, aptosid_eventbox1, "aptosid_eventbox1");
   GLADE_HOOKUP_OBJECT (window1, image12, "image12");
   GLADE_HOOKUP_OBJECT (window1, vdr_eventbox2, "vdr_eventbox2");
   GLADE_HOOKUP_OBJECT (window1, image17, "image17");

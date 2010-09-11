@@ -15,10 +15,10 @@ Package: vdr-gui
 Architecture: any
 Depends: ${shlibs:Depends},
  ${misc:Depends},
- sidux-vdr (>= 1.3.17),
+ aptosid-vdr (>= 1.3.17),
  menu
 Description: GUI for Video Disc Recorder (VDR)
  sets up and configures VDR client- and server systems, by allowing easy
  administration for common tasks.
  .
- This GTK2 GUI is based on sidux-vdr.
+ This GTK2 GUI is based on aptosid-vdr.

@@ -139,8 +139,8 @@ msgid "<b>Others</b>"
 msgstr ""
 
 #: ../src/interface.c:349
-msgid "http://sidux.com"
-msgstr "http://sidux.com"
+msgid "http://aptosid.com"
+msgstr "http://aptosid.com"
 
 #: ../src/interface.c:360
 msgid "http://www.linuxtv.org/vdrwiki"

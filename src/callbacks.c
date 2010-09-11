@@ -60,7 +60,7 @@ on_vdr_sxfe_clicked                    (GtkButton       *button,
 
     vdrip_file("w");  // w for write the file
 
-    system("/usr/share/sidux-vdr/vdr-xine sxfe &");
+    system("/usr/share/aptosid-vdr/vdr-xine sxfe &");
 }
 
 
@@ -68,7 +68,7 @@ void
 on_vdr_sxfe_autostart_clicked          (GtkButton       *button,
                                         gpointer         user_data)
 {
-     system("printf '#!/bin/sh\n/usr/share/sidux-vdr/vdr-xine sxfe' > $HOME/.kde/Autostart/vdr-xine-start;chmod +x $HOME/.kde/Autostart/vdr-xine-start\n");
+     system("printf '#!/bin/sh\n/usr/share/aptosid-vdr/vdr-xine sxfe' > $HOME/.kde/Autostart/vdr-xine-start;chmod +x $HOME/.kde/Autostart/vdr-xine-start\n");
 }
 
 
@@ -92,7 +92,7 @@ void
 on_xine_ui_autostart_clicked           (GtkButton       *button,
                                         gpointer         user_data)
 {
-     system("printf '#!/bin/sh\n/usr/share/sidux-vdr/vdr-xine xine' > $HOME/.kde/Autostart/vdr-xine-start;chmod +x $HOME/.kde/Autostart/vdr-xine-start\n");
+     system("printf '#!/bin/sh\n/usr/share/aptosid-vdr/vdr-xine xine' > $HOME/.kde/Autostart/vdr-xine-start;chmod +x $HOME/.kde/Autostart/vdr-xine-start\n");
 }
 
 
@@ -108,7 +108,7 @@ void
 on_vdr_ip_clicked                      (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("/usr/share/sidux-vdr/vdr-ip &");
+    system("/usr/share/aptosid-vdr/vdr-ip &");
 }
 
 
@@ -116,9 +116,9 @@ void
 on_udp_network_transport_clicked       (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("[ -e $HOME/.sidux-vdr.conf ] || touch $HOME/.sidux-vdr.conf;\
-            sed -ie '/^NetworkTransportMode.*/d' $HOME/.sidux-vdr.conf;\
-            echo 'NetworkTransportMode = 1' >> $HOME/.sidux-vdr.conf");
+    system("[ -e $HOME/.aptosid-vdr.conf ] || touch $HOME/.aptosid-vdr.conf;\
+            sed -ie '/^NetworkTransportMode.*/d' $HOME/.aptosid-vdr.conf;\
+            echo 'NetworkTransportMode = 1' >> $HOME/.aptosid-vdr.conf");
 }
 
 
@@ -146,9 +146,9 @@ void
 on_network_transport_tcp_clicked       (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("[ -e $HOME/.sidux-vdr.conf ] || touch $HOME/.sidux-vdr.conf;\
-            sed -ie '/^NetworkTransportMode.*/d' $HOME/.sidux-vdr.conf;\
-            echo 'NetworkTransportMode = 0' >> $HOME/.sidux-vdr.conf");
+    system("[ -e $HOME/.aptosid-vdr.conf ] || touch $HOME/.aptosid-vdr.conf;\
+            sed -ie '/^NetworkTransportMode.*/d' $HOME/.aptosid-vdr.conf;\
+            echo 'NetworkTransportMode = 0' >> $HOME/.aptosid-vdr.conf");
 }
 
 
@@ -156,7 +156,7 @@ void
 on_vdr_start_clicked                   (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("su-to-root -X -c \"/usr/bin/x-terminal-emulator -e /usr/share/sidux-vdr/vdr-start\"");
+    system("su-to-root -X -c \"/usr/bin/x-terminal-emulator -e /usr/share/aptosid-vdr/vdr-start\"");
 }
 
 
@@ -164,7 +164,7 @@ void
 on_vdr_stop_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("su-to-root -X -c \"x-terminal-emulator -e /usr/share/sidux-vdr/vdr-stop\"");
+    system("su-to-root -X -c \"x-terminal-emulator -e /usr/share/aptosid-vdr/vdr-stop\"");
 }
 
 
@@ -172,7 +172,7 @@ void
 on_channelslist_clicked                (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("su-to-root -X -c \"/usr/share/sidux-vdr/vdr-channelswitch\"");
+    system("su-to-root -X -c \"/usr/share/aptosid-vdr/vdr-channelswitch\"");
 }
 
 
@@ -188,7 +188,7 @@ void
 on_videodir_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("su-to-root -X -c \"x-terminal-emulator -e /usr/share/sidux-vdr/vdr-videodir\"");
+    system("su-to-root -X -c \"x-terminal-emulator -e /usr/share/aptosid-vdr/vdr-videodir\"");
 }
 
 
@@ -242,8 +242,8 @@ on_language_automatic_clicked          (GtkButton       *button,
 
    char call[MAXLINE], root_or_not[MAXLINE];
 
-   strncpy( call, "echo '#needed if_file_empty' >> /var/lib/vdr/sidux-vdr/sidux-vdr.conf;", MAXLINE);
-   strncat( call, "sed -i -e '/LanguageMode/d' -e 'i\\LanguageMode = 0' -e '/./d' /var/lib/vdr/sidux-vdr/sidux-vdr.conf", MAXLINE);
+   strncpy( call, "echo '#needed if_file_empty' >> /var/lib/vdr/aptosid-vdr/aptosid-vdr.conf;", MAXLINE);
+   strncat( call, "sed -i -e '/LanguageMode/d' -e 'i\\LanguageMode = 0' -e '/./d' /var/lib/vdr/aptosid-vdr/aptosid-vdr.conf", MAXLINE);
 
 
    // root check
@@ -267,8 +267,8 @@ on_language_manuel_clicked             (GtkButton       *button,
 
    char call[MAXLINE], root_or_not[MAXLINE];
 
-   strncpy( call, "echo '#needed if_file_empty' >> /var/lib/vdr/sidux-vdr/sidux-vdr.conf;", MAXLINE);
-   strncat( call, "sed -i -e '/LanguageMode/d' -e 'i\\LanguageMode = 1' -e '/./d' /var/lib/vdr/sidux-vdr/sidux-vdr.conf", MAXLINE);
+   strncpy( call, "echo '#needed if_file_empty' >> /var/lib/vdr/aptosid-vdr/aptosid-vdr.conf;", MAXLINE);
+   strncat( call, "sed -i -e '/LanguageMode/d' -e 'i\\LanguageMode = 1' -e '/./d' /var/lib/vdr/aptosid-vdr/aptosid-vdr.conf", MAXLINE);
 
 
    // root check
@@ -289,7 +289,7 @@ void
 on_vdradmin_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-   system("/usr/share/sidux-vdr/vdr-live &");
+   system("/usr/share/aptosid-vdr/vdr-live &");
 }
 
 
@@ -309,9 +309,9 @@ void
 on_fullscreen_clicked                  (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("[ -e $HOME/.sidux-vdr.conf ] || touch $HOME/.sidux-vdr.conf;\
-            sed -ie '/^XineFullscreen.*/d' $HOME/.sidux-vdr.conf;\
-            echo 'XineFullscreen = 1' >> $HOME/.sidux-vdr.conf");
+    system("[ -e $HOME/.aptosid-vdr.conf ] || touch $HOME/.aptosid-vdr.conf;\
+            sed -ie '/^XineFullscreen.*/d' $HOME/.aptosid-vdr.conf;\
+            echo 'XineFullscreen = 1' >> $HOME/.aptosid-vdr.conf");
 }
 
 
@@ -319,9 +319,9 @@ void
 on_fullscreenoff_clicked               (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("[ -e $HOME/.sidux-vdr.conf ] || touch $HOME/.sidux-vdr.conf;\
-            sed -ie '/^XineFullscreen.*/d' $HOME/.sidux-vdr.conf;\
-            echo 'XineFullscreen = 0' >> $HOME/.sidux-vdr.conf");
+    system("[ -e $HOME/.aptosid-vdr.conf ] || touch $HOME/.aptosid-vdr.conf;\
+            sed -ie '/^XineFullscreen.*/d' $HOME/.aptosid-vdr.conf;\
+            echo 'XineFullscreen = 0' >> $HOME/.aptosid-vdr.conf");
 }
 
 
@@ -329,19 +329,19 @@ void
 on_update_clicked                      (GtkButton       *button,
                                         gpointer         user_data)
 {
-    system("su-to-root -X -c \"x-terminal-emulator -e /usr/share/sidux-vdr/vdr-update\"");
+    system("true");
 }
 
 
 gboolean
-on_sidux_eventbox1_button_press_event  (GtkWidget       *widget,
+on_aptosid_eventbox1_button_press_event  (GtkWidget       *widget,
                                         GdkEventButton  *event,
                                         gpointer         user_data)
 {
      system("if [ $(echo $LANG|cut -c1-2) = de ]; then \
-                    x-www-browser 'http://sidux.com/index.php?&newlang=deu' & \
+                    x-www-browser 'http://aptosid.com/index.php?&newlang=deu' & \
               else \
-                    x-www-browser 'http://sidux.com/index.php?&newlang=eng' & \
+                    x-www-browser 'http://aptosid.com/index.php?&newlang=eng' & \
               fi");
 
      return FALSE;

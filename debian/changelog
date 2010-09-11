@@ -1,8 +1,10 @@
 vdr-gui (0.2.21) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * ORPHAN PACKAGE
+  * adapt for aptosid-vdr.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 08 Aug 2010 05:36:16 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 26 Aug 2010 01:28:02 +0200
 
 vdr-gui (0.2.20) unstable; urgency=low
 

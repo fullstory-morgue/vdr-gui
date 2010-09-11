@@ -139,7 +139,7 @@ on_language_manuel_clicked             (GtkButton       *button,
                                         gpointer         user_data);
 
 gboolean
-on_sidux_eventbox1_button_press_event  (GtkWidget       *widget,
+on_aptosid_eventbox1_button_press_event  (GtkWidget       *widget,
                                         GdkEventButton  *event,
                                         gpointer         user_data);
 
